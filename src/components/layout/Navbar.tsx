@@ -5,6 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navItems, site } from "@/lib/site";
 
+const logoSrc =
+  "https://res.cloudinary.com/dnfwbgfih/images/f_auto,q_auto/v1724523743/Oxbourn-Consulting-Logo-main/Oxbourn-Consulting-Logo-main.png";
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -30,18 +33,15 @@ export function Navbar() {
       }`}
     >
       <nav className="site-container flex items-center justify-between py-3 lg:py-4">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
-            src="/logo.png"
+            src={logoSrc}
             alt={site.name}
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-full object-cover"
+            width={56}
+            height={56}
+            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
             priority
           />
-          <span className="font-display text-[0.95rem] font-bold tracking-[0.0625em] text-ox-navy uppercase">
-            Oxbourn
-          </span>
         </Link>
 
         <button
