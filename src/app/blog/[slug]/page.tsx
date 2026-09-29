@@ -45,8 +45,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const related = posts.filter((item) => item.id !== post.id).slice(0, 2);
 
   return (
-    <article className="bg-white px-5 pt-28 pb-24">
-      <div className="mx-auto max-w-7xl">
+    <article className="bg-white pt-28 pb-24">
+      <div className="site-container">
         <header className="mx-auto max-w-4xl text-center">
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center justify-center gap-2 text-sm text-ox-muted">
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <li className="max-w-[28rem] truncate">{post.title}</li>
             </ol>
           </nav>
-          <p className="mt-6 text-xs tracking-[0.16em] text-ox-muted uppercase">
+          <p className="mt-6 font-sans text-sm text-ox-muted">
             {formatPostDate(post.date)}
             <span className="mx-2 text-ox-teal">•</span>
             {post.category ?? "Insight"}
@@ -105,7 +105,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
               <Link
                 href="/#contact"
-                className="mt-6 inline-flex rounded bg-ox-teal px-6 py-3 font-display text-xs font-bold tracking-[0.16em] text-white uppercase transition-colors hover:bg-ox-teal-dark"
+                className="mt-6 inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white uppercase transition-colors hover:bg-ox-teal-dark"
               >
                 Contact us
               </Link>
@@ -125,14 +125,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
 
       {related.length > 0 ? (
-        <section className="mt-20 border-t border-ox-ice bg-ox-mist px-5 py-20">
-          <div className="mx-auto max-w-7xl">
+        <section className="mt-20 border-t border-ox-ice bg-ox-mist py-20">
+          <div className="site-container">
             <p className="text-center text-sm text-ox-muted">You may also like</p>
             <h2 className="mt-3 text-center font-display text-3xl font-bold text-ox-navy uppercase">
               Related posts
             </h2>
             <span className="mx-auto mt-5 block h-0.5 w-20 bg-ox-teal" />
-            <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
               {related.map((item) => (
                 <PostCard key={item.id} post={item} />
               ))}

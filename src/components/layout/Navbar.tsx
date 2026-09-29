@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navItems, site } from "@/lib/site";
 
 export function Navbar() {
-  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const solid = scrolled || open || pathname !== "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -28,11 +25,11 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        solid ? "bg-ox-navy shadow-lg" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 bg-ox-cream transition-shadow duration-300 ${
+        scrolled || open ? "shadow-md" : ""
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 lg:py-4">
+      <nav className="site-container flex items-center justify-between py-3 lg:py-4">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image
             src="/logo.png"
@@ -42,20 +39,20 @@ export function Navbar() {
             className="h-12 w-12 rounded-full object-cover"
             priority
           />
-          <span className="font-display text-sm font-semibold tracking-[0.18em] text-white uppercase">
+          <span className="font-display text-[0.95rem] font-bold tracking-[0.0625em] text-ox-navy uppercase">
             Oxbourn
           </span>
         </Link>
 
         <button
           type="button"
-          className="inline-flex items-center gap-2 rounded border border-white/30 px-3 py-2 text-xs font-semibold tracking-[0.2em] text-white uppercase lg:hidden"
+          className="inline-flex items-center gap-2 rounded border border-ox-navy/30 px-3 py-2 font-display text-[0.95rem] font-normal tracking-[0.0625em] text-ox-navy uppercase lg:hidden"
           aria-expanded={open}
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
         >
           Menu
-          <span className="block h-3 w-3 border-y-2 border-white" />
+          <span className="block h-3 w-3 border-y-2 border-ox-navy" />
         </button>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -63,7 +60,7 @@ export function Navbar() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="font-display text-xs font-semibold tracking-[0.22em] text-white/90 uppercase transition-colors hover:text-ox-sky"
+                className="font-display text-[0.95rem] font-normal tracking-[0.0625em] text-ox-navy uppercase transition-colors hover:text-ox-teal"
               >
                 {item.label}
               </Link>
@@ -73,13 +70,13 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="border-t border-white/10 bg-ox-navy px-5 py-6 lg:hidden">
+        <div className="border-t border-ox-navy/10 bg-ox-cream px-5 py-6 lg:hidden">
           <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block font-display text-sm tracking-[0.22em] text-white uppercase"
+                  className="block font-display text-[0.95rem] font-normal tracking-[0.0625em] text-ox-navy uppercase"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

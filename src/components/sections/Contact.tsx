@@ -10,15 +10,18 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative bg-ox-navy px-5 py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(1,151,178,0.18),_transparent_60%)]" />
-      <div className="relative mx-auto max-w-3xl">
-        <SectionHeading kicker="Get in touch" title="Contact Us" light />
-        <p className="mt-8 text-center leading-7 text-white/75">
-          Discuss your challenges, explore the CaaS model, and see how we can help
-          you stay ahead.
-        </p>
-        <form className="mt-12 grid gap-5 sm:grid-cols-2" onSubmit={handleSubmit}>
+    <section
+      id="contact"
+      className="page-section bg-[#212529] bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/agency/map-image.png)" }}
+    >
+      <div className="site-container">
+        <SectionHeading
+          kicker="Discuss your challenges, explore the CaaS model, and see how we can help you stay ahead."
+          title="Contact Us"
+          light
+        />
+        <form className="grid gap-5 sm:grid-cols-2" onSubmit={handleSubmit}>
           <label className="sr-only" htmlFor="name">
             Name
           </label>
@@ -64,7 +67,7 @@ export function Contact() {
           <div className="sm:col-span-2 text-center">
             <button
               type="submit"
-              className="rounded bg-ox-teal px-10 py-4 font-display text-sm font-bold tracking-[0.18em] text-white uppercase transition-colors hover:bg-ox-teal-dark"
+              className="rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white uppercase transition-colors hover:bg-ox-teal-dark"
             >
               Send Message
             </button>

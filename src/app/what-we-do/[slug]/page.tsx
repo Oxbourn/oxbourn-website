@@ -1,0 +1,76 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
+import { getService, services } from "@/lib/site";
+
+export const revalidate = 60;
+
+type ServicePageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export function generateStaticParams() {
+  return services.map((service) => ({ slug: service.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: ServicePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getService(slug);
+
+  if (!service) {
+    return { title: "What We Do" };
+  }
+
+  return {
+    title: service.title,
+    description: service.summary || service.paragraphs[0] || service.title,
+  };
+}
+
+export default async function ServicePage({ params }: ServicePageProps) {
+  const { slug } = await params;
+  const service = getService(slug);
+
+  if (!service) {
+    notFound();
+  }
+
+  return (
+    <>
+      <article className="bg-white pt-32 pb-20">
+        <div className="site-container">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex flex-wrap items-center gap-2 text-sm text-ox-muted">
+              <li>
+                <Link href="/#what-we-do" className="text-ox-teal hover:text-ox-teal-dark">
+                  What We Do
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>{service.title}</li>
+            </ol>
+          </nav>
+          <h1 className="mt-6 font-display text-4xl font-bold tracking-tight text-ox-navy uppercase sm:text-5xl">
+            {service.title}
+          </h1>
+          {service.summary ? (
+            <p className="mt-6 text-lg leading-8 text-ox-navy">{service.summary}</p>
+          ) : null}
+          {service.paragraphs.length > 0 ? (
+            <div className="mt-10 space-y-6">
+              {service.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="text-[1.05rem] leading-8 text-ox-muted">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      </article>
+      <LatestFromBlog surface="mist" />
+    </>
+  );
+}

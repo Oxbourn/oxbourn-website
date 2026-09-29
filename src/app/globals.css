@@ -9,6 +9,7 @@
   --ox-sky: #a9d6e5;
   --ox-ink: #171717;
   --ox-muted: #5c6b6e;
+  --ox-cream: #f3eae1;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,15 +25,73 @@
   --color-ox-sky: var(--ox-sky);
   --color-ox-ink: var(--ox-ink);
   --color-ox-muted: var(--ox-muted);
-  --font-sans: "Urbanist", system-ui, sans-serif;
-  --font-display: "Josefin Sans", sans-serif;
+  --color-ox-cream: var(--ox-cream);
+  --font-sans: "Roboto Slab", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 62rem;
+  --breakpoint-xl: 75rem;
+  --breakpoint-2xl: 87.5rem;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+.site-container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .site-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .site-container {
+    max-width: 1320px;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+.page-section {
+  padding: 6rem 0;
+}
+
+@media (min-width: 768px) {
+  .page-section {
+    padding: 9rem 0;
+  }
 }
 
 body {
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
@@ -40,7 +99,8 @@ body {
 
 .section-kicker {
   font-family: var(--font-display);
-  letter-spacing: 0.28em;
+  font-weight: 400;
+  letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
 

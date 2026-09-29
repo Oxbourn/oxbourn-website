@@ -26,7 +26,7 @@ export function PostCard({ post }: PostCardProps) {
         <p className="section-kicker text-[0.7rem] text-ox-teal">
           {post.category ?? "Insight"}
         </p>
-        <p className="mt-2 text-xs tracking-[0.16em] text-ox-muted uppercase">
+        <p className="mt-2 font-sans text-sm text-ox-muted">
           {formatPostDate(post.date)}
           <span className="mx-2 text-ox-teal">•</span>
           {post.readingMinutes} min read
@@ -41,7 +41,7 @@ export function PostCard({ post }: PostCardProps) {
         </p>
         <Link
           href={`/blog/${post.slug}`}
-          className="mt-6 inline-flex font-display text-xs font-bold tracking-[0.18em] text-ox-teal uppercase transition-colors hover:text-ox-teal-dark"
+          className="mt-6 inline-flex font-display text-sm font-bold text-ox-teal uppercase transition-colors hover:text-ox-teal-dark"
         >
           Read article
         </Link>
