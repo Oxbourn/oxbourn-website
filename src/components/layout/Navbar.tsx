@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navItems, site } from "@/lib/site";
 
@@ -9,8 +10,10 @@ const logoSrc =
   "https://res.cloudinary.com/dnfwbgfih/images/f_auto,q_auto/v1724523743/Oxbourn-Consulting-Logo-main/Oxbourn-Consulting-Logo-main.png";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const onHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -26,14 +29,17 @@ export function Navbar() {
     };
   }, [open]);
 
+  const solid = !onHome || scrolled || open;
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 bg-ox-cream transition-shadow duration-300 ${
-        scrolled || open ? "shadow-md" : ""
+    <nav
+      id="mainNav"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        solid ? "bg-[#212529] py-4 shadow-md" : "bg-[#212529] py-4 lg:bg-transparent lg:py-6"
       }`}
     >
-      <nav className="site-container flex items-center justify-between py-3 lg:py-4">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+      <div className="site-container flex items-center justify-between">
+        <Link href="/#page-top" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
             src={logoSrc}
             alt={site.name}
@@ -46,13 +52,13 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex items-center gap-2 rounded border border-ox-navy/30 px-3 py-2 font-display text-[0.95rem] font-normal tracking-[0.0625em] text-ox-navy uppercase lg:hidden"
+          className="inline-flex items-center gap-2 rounded border border-white/70 px-3 py-3 font-display text-xs font-bold tracking-[0.08em] text-white uppercase lg:hidden"
           aria-expanded={open}
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
         >
           Menu
-          <span className="block h-3 w-3 border-y-2 border-ox-navy" />
+          <span className="block h-3 w-3 border-y-2 border-current" />
         </button>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -60,23 +66,23 @@ export function Navbar() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="font-display text-[0.95rem] font-normal tracking-[0.0625em] text-ox-navy uppercase transition-colors hover:text-ox-teal"
+                className="font-display text-[0.95rem] font-normal tracking-[0.0625em] text-white uppercase transition-colors hover:text-ox-teal"
               >
                 {item.label}
               </Link>
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
 
       {open ? (
-        <div className="border-t border-ox-navy/10 bg-ox-cream px-5 py-6 lg:hidden">
+        <div className="border-t border-white/10 bg-[#212529] px-5 py-6 lg:hidden">
           <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block font-display text-[0.95rem] font-normal tracking-[0.0625em] text-ox-navy uppercase"
+                  className="block font-display text-[0.95rem] font-normal tracking-[0.0625em] text-white uppercase"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
@@ -86,6 +92,6 @@ export function Navbar() {
           </ul>
         </div>
       ) : null}
-    </header>
+    </nav>
   );
 }

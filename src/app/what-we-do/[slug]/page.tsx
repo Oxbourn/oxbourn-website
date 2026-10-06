@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   return {
     title: service.title,
-    description: service.summary || service.paragraphs[0] || service.title,
+    description: service.summary,
   };
 }
 
@@ -56,18 +56,27 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <h1 className="mt-6 font-display text-4xl font-bold tracking-tight text-ox-navy uppercase sm:text-5xl">
             {service.title}
           </h1>
-          {service.summary ? (
-            <p className="mt-6 text-lg leading-8 text-ox-navy">{service.summary}</p>
-          ) : null}
-          {service.paragraphs.length > 0 ? (
-            <div className="mt-10 space-y-6">
-              {service.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="text-[1.05rem] leading-8 text-ox-muted">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          ) : null}
+          <div className="mt-10 max-w-3xl space-y-6">
+            {service.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="text-[1.05rem] leading-8 text-ox-muted">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div className="mt-12 max-w-3xl border-t border-ox-ice pt-10">
+            <h2 className="font-display text-xl font-bold text-ox-navy uppercase">
+              What we cover
+            </h2>
+            <p className="mt-4 text-[1.05rem] leading-8 text-ox-muted">{service.cover}</p>
+          </div>
+          <div className="mt-12">
+            <Link
+              href="/#contact"
+              className="btn-agency"
+            >
+              Contact us
+            </Link>
+          </div>
         </div>
       </article>
       <LatestFromBlog surface="mist" />

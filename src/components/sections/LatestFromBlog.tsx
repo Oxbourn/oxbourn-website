@@ -34,9 +34,9 @@ export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps)
         <div className="mt-14 text-center">
           <Link
             href="/blog"
-            className="inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white uppercase transition-colors hover:bg-ox-teal-dark"
+            className="btn-agency"
           >
-            View the blog
+            More Insights
           </Link>
         </div>
       </div>

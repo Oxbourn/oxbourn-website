@@ -16,7 +16,7 @@ export function SectionHeading({ kicker, title, light = false }: SectionHeadingP
       </h2>
       <p
         className={`mb-16 font-sans text-base font-normal italic ${
-          light ? "text-white/75" : "text-ox-muted"
+          light ? "text-[#6c757d]" : "text-ox-muted"
         }`}
       >
         {kicker}

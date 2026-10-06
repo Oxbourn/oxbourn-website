@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent } from "react";
-import { site } from "@/lib/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Contact() {
@@ -10,78 +9,48 @@ export function Contact() {
   }
 
   return (
-    <section
-      id="contact"
-      className="page-section bg-[#212529] bg-center bg-no-repeat"
-      style={{ backgroundImage: "url(/agency/map-image.png)" }}
-    >
+    <section id="contact" className="page-section">
       <div className="site-container">
         <SectionHeading
-          kicker="Discuss your challenges, explore the CaaS model, and see how we can help you stay ahead."
+          kicker="Discuss your family’s wealth, governance and continuity objectives with Oxbourn Consulting."
           title="Contact Us"
           light
         />
-        <form className="grid gap-5 sm:grid-cols-2" onSubmit={handleSubmit}>
-          <label className="sr-only" htmlFor="name">
-            Name
-          </label>
-          <input
-            id="name"
-            name="name"
-            placeholder="Your Name *"
-            required
-            className="rounded bg-white px-4 py-3 text-ox-ink outline-none ring-ox-teal focus:ring-2"
-          />
-          <label className="sr-only" htmlFor="email">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Your Email *"
-            required
-            className="rounded bg-white px-4 py-3 text-ox-ink outline-none ring-ox-teal focus:ring-2"
-          />
-          <label className="sr-only" htmlFor="phone">
-            Phone
-          </label>
-          <input
-            id="phone"
-            name="phone"
-            placeholder="Your Phone *"
-            required
-            className="rounded bg-white px-4 py-3 text-ox-ink outline-none ring-ox-teal focus:ring-2 sm:col-span-2"
-          />
-          <label className="sr-only" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your Message *"
-            required
-            rows={6}
-            className="rounded bg-white px-4 py-3 text-ox-ink outline-none ring-ox-teal focus:ring-2 sm:col-span-2"
-          />
-          <div className="sm:col-span-2 text-center">
-            <button
-              type="submit"
-              className="rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white uppercase transition-colors hover:bg-ox-teal-dark"
-            >
+        <form id="contactForm" onSubmit={handleSubmit}>
+          <div className="contact-form-grid">
+            <div>
+              <div className="form-group">
+                <label className="sr-only" htmlFor="name">
+                  Name
+                </label>
+                <input id="name" name="name" type="text" placeholder="Your Name *" required />
+              </div>
+              <div className="form-group">
+                <label className="sr-only" htmlFor="email">
+                  Email
+                </label>
+                <input id="email" name="email" type="email" placeholder="Your Email *" required />
+              </div>
+              <div className="form-group form-group-last">
+                <label className="sr-only" htmlFor="phone">
+                  Phone
+                </label>
+                <input id="phone" name="phone" type="tel" placeholder="Your Phone *" required />
+              </div>
+            </div>
+            <div className="form-group form-group-textarea form-group-last">
+              <label className="sr-only" htmlFor="message">
+                Message
+              </label>
+              <textarea id="message" name="message" placeholder="Your Message *" required />
+            </div>
+          </div>
+          <div className="text-center">
+            <button type="submit" className="btn-agency">
               Send Message
             </button>
           </div>
         </form>
-        <div className="mt-12 grid gap-6 text-center text-sm text-white/80 sm:grid-cols-3">
-          <p>{site.address}</p>
-          <a href={`mailto:${site.email}`} className="hover:text-ox-sky">
-            {site.email}
-          </a>
-          <a href={site.phoneHref} className="hover:text-ox-sky">
-            {site.phone}
-          </a>
-        </div>
       </div>
     </section>
   );

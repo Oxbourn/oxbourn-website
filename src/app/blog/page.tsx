@@ -7,7 +7,7 @@ import { getPosts } from "@/lib/wordpress";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Insights",
   description: blog.intro,
 };
 
