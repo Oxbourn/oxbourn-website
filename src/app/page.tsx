@@ -1,4 +1,3 @@
-import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
@@ -11,7 +10,6 @@ export default function Home() {
     <>
       <Hero />
       <WhatWeDo />
-      <About />
       <LatestFromBlog surface="mist" />
       <Contact />
     </>

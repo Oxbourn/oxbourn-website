@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
@@ -40,7 +41,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <>
-      <article className="bg-white pt-32 pb-20">
+      <article className="bg-white pt-28 pb-16 md:pt-32 md:pb-20">
         <div className="site-container">
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 text-sm text-ox-muted">
@@ -53,29 +54,28 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <li>{service.title}</li>
             </ol>
           </nav>
-          <h1 className="mt-6 font-display text-4xl font-bold tracking-tight text-ox-navy uppercase sm:text-5xl">
-            {service.title}
-          </h1>
-          <div className="mt-10 max-w-3xl space-y-6">
-            {service.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="text-[1.05rem] leading-8 text-ox-muted">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-          <div className="mt-12 max-w-3xl border-t border-ox-ice pt-10">
-            <h2 className="font-display text-xl font-bold text-ox-navy uppercase">
-              What we cover
-            </h2>
-            <p className="mt-4 text-[1.05rem] leading-8 text-ox-muted">{service.cover}</p>
-          </div>
-          <div className="mt-12">
-            <Link
-              href="/#contact"
-              className="btn-agency"
-            >
-              Contact us
-            </Link>
+          <div className="service-page-grid">
+            <div>
+              <h1 className="page-title mt-6">{service.title}</h1>
+              <div className="page-prose mt-8 space-y-5">
+                {service.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <div className="mt-10 border-t border-ox-ice pt-8">
+                <h2 className="page-subtitle">What we cover</h2>
+                <p className="page-prose mt-4">{service.cover}</p>
+              </div>
+            </div>
+            <div className="service-page-media">
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={900}
+                height={1100}
+                className="service-page-photo"
+              />
+            </div>
           </div>
         </div>
       </article>

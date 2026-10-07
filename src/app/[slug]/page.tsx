@@ -9,6 +9,7 @@ type LegacyPostPageProps = {
 };
 
 const reservedSlugs = new Set([
+  "about",
   "about-us",
   "services",
   "get-in-touch",

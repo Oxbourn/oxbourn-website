@@ -23,6 +23,14 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -35,7 +43,7 @@ export function Navbar() {
     <nav
       id="mainNav"
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid ? "bg-[#212529] py-4 shadow-md" : "bg-[#212529] py-4 lg:bg-transparent lg:py-6"
+        solid ? "bg-[#212529] py-4 shadow-md" : "bg-[#212529] py-4 md:bg-transparent md:py-6"
       }`}
     >
       <div className="site-container flex items-center justify-between">
@@ -43,31 +51,28 @@ export function Navbar() {
           <Image
             src={logoSrc}
             alt={site.name}
-            width={56}
-            height={56}
-            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+            width={48}
+            height={48}
+            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
             priority
           />
         </Link>
 
         <button
           type="button"
-          className="inline-flex items-center gap-2 rounded border border-white/70 px-3 py-3 font-display text-xs font-bold tracking-[0.08em] text-white uppercase lg:hidden"
+          className="navbar-toggler"
           aria-expanded={open}
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
         >
           Menu
-          <span className="block h-3 w-3 border-y-2 border-current" />
+          <span className="navbar-toggler-icon" />
         </button>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="navbar-desktop">
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link
-                href={item.href}
-                className="font-display text-[0.95rem] font-normal tracking-[0.0625em] text-white uppercase transition-colors hover:text-ox-teal"
-              >
+              <Link href={item.href} className="nav-link">
                 {item.label}
               </Link>
             </li>
@@ -76,15 +81,11 @@ export function Navbar() {
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 bg-[#212529] px-5 py-6 lg:hidden">
-          <ul className="flex flex-col gap-4">
+        <div className="navbar-collapse">
+          <ul>
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block font-display text-[0.95rem] font-normal tracking-[0.0625em] text-white uppercase"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href={item.href} className="nav-link" onClick={() => setOpen(false)}>
                   {item.label}
                 </Link>
               </li>

@@ -13,7 +13,7 @@ export const site = {
 
 export const navItems = [
   { href: "/#what-we-do", label: "What We Do" },
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About" },
   { href: "/#insights", label: "Insights" },
   { href: "/#contact", label: "Contact" },
 ] as const;
@@ -25,33 +25,12 @@ export const blog = {
     "Perspectives on family offices, wealth structuring, governance, succession, and preparing the next generation.",
 } as const;
 
-export const heroSlides = [
-  {
-    title: "Structure Your Wealth",
-    body: "Organize your assets, businesses and ownership interests into a coherent whole.",
-    image: "/agency/hero/1.jpg",
-  },
-  {
-    title: "See Your Entire Wealth",
-    body: "Gain a consolidated view of your wealth across assets, entities and jurisdictions.",
-    image: "/agency/hero/2.jpg",
-  },
-  {
-    title: "Protect Your Wealth",
-    body: "Put the appropriate ownership, governance and protective arrangements around your wealth.",
-    image: "/agency/hero/3.jpg",
-  },
-  {
-    title: "Preserve Your Wealth",
-    body: "Establish the governance and stewardship needed to maintain wealth across generations.",
-    image: "/agency/hero/4.jpg",
-  },
-  {
-    title: "Govern Your Wealth",
-    body: "Create clear frameworks for ownership, decision-making, responsibility and oversight.",
-    image: "/agency/hero/5.jpg",
-  },
-] as const;
+export const hero = {
+  subheading: "Oxbourn Consulting Helps You",
+  heading: "Structure Your Wealth",
+  body: "Organize your assets, businesses and ownership interests into a coherent whole.",
+  image: "/agency/hero/1.jpg",
+} as const;
 
 export const services = [
   {
@@ -162,25 +141,11 @@ export function getService(slug: string): Service | undefined {
 
 export const about = {
   kicker: "Exclusive family office consulting",
-  title: "About",
-  milestones: [
-    {
-      label: "Our Focus",
-      title: "Family Office Consulting",
-      body: "Oxbourn Consulting is Nigeria's first exclusive family office consulting firm, primarily dedicated to helping families and individuals structure their wealth and establish a family office to manage that wealth across all asset classes, preserve it and seamlessly transfer it from one generation to the next.",
-      image: "/agency/about/1.jpg",
-    },
-    {
-      label: "Our Mandate",
-      title: "The Only Thing We Do",
-      body: "Setting up and supporting family offices that organize, protect and enable generational wealth is not one of the things we do; it is the only thing we do.",
-      image: "/agency/about/2.jpg",
-    },
-    {
-      label: "Our Belief",
-      title: "Wealth Governance",
-      body: "At the centre of our approach is the belief that a family office is fundamentally a wealth governance institution, and not merely an investment vehicle. It gives the family the oversight, coordination and decision-making framework required to manage its entire wealth in line with its objectives.",
-      image: "/agency/about/3.jpg",
-    },
+  title: "About Us",
+  image: "/agency/services/family-office.jpg",
+  paragraphs: [
+    "Oxbourn Consulting is Nigeria's first exclusive family office consulting firm, primarily dedicated to helping families and individuals structure their wealth and establish a family office to manage that wealth across all asset classes, preserve it and seamlessly transfer it from one generation to the next.",
+    "Setting up and supporting family offices that organize, protect and enable generational wealth is not one of the things we do; it is the only thing we do.",
+    "At the centre of our approach is the belief that a family office is fundamentally a wealth governance institution, and not merely an investment vehicle. It gives the family the oversight, coordination and decision-making framework required to manage its entire wealth in line with its objectives.",
   ],
 } as const;

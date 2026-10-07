@@ -83,7 +83,7 @@ function rewriteWpLinks(html: string) {
 
     return content
       .replace(new RegExp(`${escaped}/blog/?`, "g"), "/blog")
-      .replace(new RegExp(`${escaped}/about-us/?`, "g"), "/#about")
+      .replace(new RegExp(`${escaped}/about-us/?`, "g"), "/about")
       .replace(new RegExp(`${escaped}/services/?`, "g"), "/#services")
       .replace(new RegExp(`${escaped}/get-in-touch/?`, "g"), "/#contact")
       .replace(
