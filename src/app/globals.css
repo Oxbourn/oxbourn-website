@@ -8,7 +8,7 @@
   --ox-mist: #f9f9fb;
   --ox-sky: #a9d6e5;
   --ox-ink: #171717;
-  --ox-muted: #5c6b6e;
+  --ox-muted: #6c757d;
   --ox-cream: #f3eae1;
   --background: #ffffff;
   --foreground: #171717;
@@ -103,7 +103,7 @@ section[id] {
   margin: 0 auto 2rem;
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
   line-height: 1.6;
   color: var(--ox-muted);
@@ -133,6 +133,7 @@ section[id] {
 
 .page-prose {
   font-size: 0.95rem;
+  font-weight: 300;
   line-height: 1.7;
   color: var(--ox-muted);
 }
@@ -153,6 +154,7 @@ section[id] {
 .about-copy,
 .about-copy p {
   font-size: 0.95rem;
+  font-weight: 300;
   line-height: 1.7;
   color: var(--ox-muted);
 }
@@ -302,6 +304,7 @@ header.masthead .masthead-body {
   max-width: 36rem;
   margin: 0 auto 1.75rem;
   font-size: 0.95rem;
+  font-weight: 300;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -370,6 +373,7 @@ header.masthead .masthead-body {
 .service-copy {
   margin: 0;
   font-size: 0.85rem;
+  font-weight: 300;
   line-height: 1.65;
   color: var(--ox-muted);
 }
@@ -814,6 +818,10 @@ body {
   font-family: var(--font-sans);
 }
 
+p {
+  font-weight: 300;
+}
+
 .section-kicker {
   font-family: var(--font-display);
   font-size: 0.7rem;
@@ -831,6 +839,7 @@ body {
 .wp-content {
   color: var(--ox-muted);
   font-size: 1.125rem;
+  font-weight: 300;
   line-height: 1.75;
 }
 
@@ -878,6 +887,8 @@ body {
 .wp-content p,
 .wp-content .wp-block-paragraph {
   margin: 0;
+  font-weight: 300;
+  color: var(--ox-muted);
 }
 
 .wp-content a {
@@ -1082,4 +1093,102 @@ body {
   gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   margin-top: 1.75rem;
+}
+
+html[data-fonts="clean"] {
+  --font-display: "Plus Jakarta Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Source Sans 3", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html[data-fonts="editorial"] {
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Newsreader", Georgia, "Times New Roman", serif;
+}
+
+html[data-fonts="editorial"] .section-heading,
+html[data-fonts="editorial"] .page-title,
+html[data-fonts="editorial"] .masthead-heading,
+html[data-fonts="editorial"] .page-subtitle {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.font-preview {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.font-preview-toggle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(0, 23, 26, 0.12);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 23, 26, 0.12);
+  color: var(--ox-navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+}
+
+.font-preview-panel {
+  width: 16.5rem;
+  padding: 0.85rem;
+  border: 1px solid rgba(0, 23, 26, 0.08);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 16px 40px rgba(0, 23, 26, 0.14);
+  backdrop-filter: blur(8px);
+}
+
+.font-preview-kicker {
+  margin: 0 0 0.65rem;
+  color: var(--ox-muted);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.font-preview-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.55rem 0.65rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: transparent;
+  color: var(--ox-navy);
+  text-align: left;
+}
+
+.font-preview-option span {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.font-preview-option small {
+  color: var(--ox-muted);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.font-preview-option.is-active,
+.font-preview-option:hover {
+  background: var(--ox-mist);
 }
