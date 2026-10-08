@@ -1,5 +1,6 @@
 import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
+import { HowWeHelp } from "@/components/sections/HowWeHelp";
 import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
 import { WhatWeDo } from "@/components/sections/WhatWeDo";
 
@@ -10,7 +11,8 @@ export default function Home() {
     <>
       <Hero />
       <WhatWeDo />
-      <LatestFromBlog surface="mist" />
+      <HowWeHelp />
+      <LatestFromBlog />
       <Contact />
     </>
   );

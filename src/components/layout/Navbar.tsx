@@ -47,13 +47,18 @@ export function Navbar() {
       }`}
     >
       <div className="site-container flex items-center justify-between">
-        <Link href="/#page-top" className="flex items-center" onClick={() => setOpen(false)}>
+        <Link
+          href="/#page-top"
+          className="navbar-brand"
+          aria-label={site.name}
+          onClick={() => setOpen(false)}
+        >
           <Image
             src={logoSrc}
             alt={site.name}
-            width={48}
-            height={48}
-            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+            width={64}
+            height={64}
+            className="navbar-logo"
             priority
           />
         </Link>
@@ -65,7 +70,6 @@ export function Navbar() {
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
         >
-          Menu
           <span className="navbar-toggler-icon" />
         </button>
 

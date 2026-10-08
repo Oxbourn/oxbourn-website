@@ -26,11 +26,41 @@ export const blog = {
 } as const;
 
 export const hero = {
-  subheading: "Oxbourn Consulting Helps You",
-  heading: "Structure Your Wealth",
-  body: "Organize your assets, businesses and ownership interests into a coherent whole.",
-  image: "/agency/hero/1.jpg",
+  heading: "Nigeria’s First Exclusive Family Office Consulting Firm",
+  subheading:
+    "Helping families structure, govern, preserve and transfer wealth across generations",
+  cta: "Learn more",
+  ctaHref: "/about",
+  image: "/hero/banner.jpg",
 } as const;
+
+export const helpsYou = [
+  {
+    title: "Structure Your Wealth",
+    body: "Organize your assets, businesses and ownership interests into a coherent whole.",
+    image: "/agency/hero/1.jpg",
+  },
+  {
+    title: "See Your Entire Wealth",
+    body: "Gain a consolidated view of your wealth across assets, entities and jurisdictions.",
+    image: "/agency/hero/2.jpg",
+  },
+  {
+    title: "Protect Your Wealth",
+    body: "Put the appropriate ownership, governance and protective arrangements around your wealth.",
+    image: "/agency/hero/3.jpg",
+  },
+  {
+    title: "Preserve Your Wealth",
+    body: "Establish the governance and stewardship needed to maintain wealth across generations.",
+    image: "/agency/hero/4.jpg",
+  },
+  {
+    title: "Govern Your Wealth",
+    body: "Create clear frameworks for ownership, decision-making, responsibility and oversight.",
+    image: "/agency/hero/5.jpg",
+  },
+] as const;
 
 export const services = [
   {
@@ -145,7 +175,9 @@ export const about = {
   image: "/agency/services/family-office.jpg",
   paragraphs: [
     "Oxbourn Consulting is Nigeria's first exclusive family office consulting firm, primarily dedicated to helping families and individuals structure their wealth and establish a family office to manage that wealth across all asset classes, preserve it and seamlessly transfer it from one generation to the next.",
-    "Setting up and supporting family offices that organize, protect and enable generational wealth is not one of the things we do; it is the only thing we do.",
-    "At the centre of our approach is the belief that a family office is fundamentally a wealth governance institution, and not merely an investment vehicle. It gives the family the oversight, coordination and decision-making framework required to manage its entire wealth in line with its objectives.",
+    "Setting up and supporting family offices that organize, protect and enable generational wealth is not one of the things we do; it is the only thing we do. Our agile team of professionals has a highly nuanced understanding of family offices, their primary objectives and the complexities of organizing, governing and preserving multigenerational wealth.",
+    "We help families organize and consolidate their entire wealth across operating businesses, investments, properties, trusts and other assets, providing the visibility, governance and oversight required to manage their wealth as a whole in a single dashboard.",
+    "Our work is guided by proprietary frameworks developed specifically for family office establishment and management, wealth structuring, family governance, wealth reporting, succession and next-generation preparation. We provide the technology that gives families a consolidated 360° view of their entire wealth across all asset classes, entities and jurisdictions.",
+    "At the centre of our approach is the belief that a family office is fundamentally a wealth governance institution, and not merely an investment vehicle. It gives the family the oversight, coordination and decision-making framework required to manage its entire wealth in line with its objectives, and we work with each family to establish a family office designed around what matters to them.",
   ],
 } as const;

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full scroll-smooth antialiased" suppressHydrationWarning>
+    <html lang="en" className="h-full scroll-smooth antialiased" data-fonts="grotesk" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var ids=["agency","clean","modern","grotesk","studio","instrument","editorial"];var q=new URLSearchParams(location.search).get("fonts");var s=sessionStorage.getItem("ox-font-preview");var id=ids.indexOf(q)>=0?q:ids.indexOf(s)>=0?s:"agency";document.documentElement.setAttribute("data-fonts",id);}catch(e){}})();`,
+            __html: `(function(){try{var ids=["agency","clean","modern","grotesk","studio","instrument","editorial"];var p=new URLSearchParams(location.search);var q=p.get("fonts");var s=sessionStorage.getItem("ox-font-preview");var preview=p.has("fonts");var id=ids.indexOf(q)>=0?q:preview&&ids.indexOf(s)>=0?s:"grotesk";document.documentElement.setAttribute("data-fonts",id);}catch(e){}})();`,
           }}
         />
       </head>

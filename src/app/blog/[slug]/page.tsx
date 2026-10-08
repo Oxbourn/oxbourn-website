@@ -47,12 +47,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="bg-white pt-28 pb-24">
       <div className="site-container">
-        <header className="mx-auto max-w-4xl text-center">
+        <header className="max-w-4xl">
           <nav aria-label="Breadcrumb">
-            <ol className="flex flex-wrap items-center justify-center gap-2 text-sm text-ox-muted">
+            <ol className="flex flex-wrap items-center gap-2 text-sm text-ox-muted">
               <li>
                 <Link href="/blog" className="text-ox-teal hover:text-ox-teal-dark">
-                  Blog
+                  Insight
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
@@ -66,9 +66,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <span className="mx-2 text-ox-teal">•</span>
             {post.readingMinutes} min read
           </p>
-          <h1 className="mt-5 font-display text-4xl font-bold leading-tight text-ox-navy sm:text-5xl">
-            {post.title}
-          </h1>
+          <h1 className="article-title mt-5">{post.title}</h1>
           <p className="mt-6 text-sm text-ox-muted">
             By <span className="font-semibold text-ox-navy">{post.author || site.name}</span>
           </p>
@@ -97,23 +95,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <aside className="lg:sticky lg:top-28">
             <div className="bg-ox-navy px-6 py-8 text-white">
-              <p className="font-display text-2xl font-bold uppercase">
-                Have questions?
-              </p>
+              <p className="page-subtitle text-white">Have questions?</p>
               <p className="mt-3 text-sm leading-6 text-white/75">
-                We can help you act on this — strategy, operations, or technology.
+                Discuss your family’s wealth, governance and continuity with Oxbourn Consulting.
               </p>
-              <Link
-                href="/#contact"
-                className="mt-6 inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white uppercase transition-colors hover:bg-ox-teal-dark"
-              >
+              <Link href="/#contact" className="btn-agency mt-6">
                 Contact us
               </Link>
             </div>
             {related[0] ? (
               <div className="mt-8 hidden lg:block">
                 <p className="section-kicker text-[0.7rem] text-ox-teal">
-                  More from the blog
+                  More Insight
                 </p>
                 <div className="mt-4">
                   <PostCard post={related[0]} />
@@ -128,9 +121,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <section className="mt-20 border-t border-ox-ice bg-ox-mist py-20">
           <div className="site-container">
             <p className="text-center text-sm text-ox-muted">You may also like</p>
-            <h2 className="mt-3 text-center font-display text-3xl font-bold text-ox-navy uppercase">
-              Related posts
-            </h2>
+            <h2 className="page-title mt-3 text-center">Related posts</h2>
             <span className="mx-auto mt-5 block h-0.5 w-20 bg-ox-teal" />
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               {related.map((item) => (
