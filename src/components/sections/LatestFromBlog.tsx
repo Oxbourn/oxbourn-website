@@ -9,7 +9,7 @@ type LatestFromBlogProps = {
 };
 
 export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps) {
-  const posts = (await getPosts(3)).slice(0, 3);
+  const posts = (await getPosts(4)).slice(0, 4);
 
   return (
     <section
@@ -24,7 +24,7 @@ export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps)
             New articles will appear here as they are published.
           </p>
         ) : (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="insight-grid">
             {posts.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}
@@ -36,7 +36,7 @@ export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps)
             href="/blog"
             className="btn-agency"
           >
-            More Insights
+            More Insight
           </Link>
         </div>
       </div>

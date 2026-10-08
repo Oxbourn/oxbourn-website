@@ -7,7 +7,7 @@ import { getPosts } from "@/lib/wordpress";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Insights",
+  title: "Insight",
   description: blog.intro,
 };
 
@@ -24,7 +24,7 @@ export default async function BlogPage() {
             New articles will appear here as they are published.
           </p>
         ) : (
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="insight-grid">
             {posts.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}

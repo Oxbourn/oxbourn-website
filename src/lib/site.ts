@@ -14,13 +14,13 @@ export const site = {
 export const navItems = [
   { href: "/#what-we-do", label: "What We Do" },
   { href: "/about", label: "About" },
-  { href: "/#insights", label: "Insights" },
+  { href: "/#insights", label: "Insight" },
   { href: "/#contact", label: "Contact" },
 ] as const;
 
 export const blog = {
   kicker: "Family wealth, governance, and continuity",
-  title: "Insights",
+  title: "Insight",
   intro:
     "Perspectives on family offices, wealth structuring, governance, succession, and preparing the next generation.",
 } as const;

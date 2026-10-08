@@ -19,7 +19,7 @@ export function Hero() {
         <h1 className="masthead-heading">{hero.heading}</h1>
         <p className="masthead-body">{hero.body}</p>
         <Link href="#insights" className="btn-agency btn-agency-xl">
-          Insights
+          Insight
         </Link>
       </div>
     </header>

@@ -16,6 +16,26 @@ const PRESETS = [
     pair: "Plus Jakarta Sans / Source Sans 3",
   },
   {
+    id: "modern",
+    label: "Modern",
+    pair: "Outfit / Inter",
+  },
+  {
+    id: "grotesk",
+    label: "Grotesk",
+    pair: "Space Grotesk / IBM Plex Sans",
+  },
+  {
+    id: "studio",
+    label: "Studio",
+    pair: "Syne / Manrope",
+  },
+  {
+    id: "instrument",
+    label: "Instrument",
+    pair: "Instrument Sans / Instrument Serif",
+  },
+  {
     id: "editorial",
     label: "Editorial",
     pair: "Playfair Display / Newsreader",
@@ -25,7 +45,7 @@ const PRESETS = [
 type FontPreset = (typeof PRESETS)[number]["id"];
 
 function isPreset(value: string | null): value is FontPreset {
-  return value === "agency" || value === "clean" || value === "editorial";
+  return PRESETS.some((preset) => preset.id === value);
 }
 
 function applyPreset(id: FontPreset) {
