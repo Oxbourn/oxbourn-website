@@ -500,17 +500,8 @@ header.masthead .masthead-subheading {
 }
 
 @media (min-width: 576px) {
-  .services-grid,
-  .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .portfolio-grid {
     gap: 1.25rem;
-  }
-
-  .portfolio-item {
-    max-width: none;
   }
 
   .portfolio-image {
@@ -519,9 +510,6 @@ header.masthead .masthead-subheading {
 }
 
 @media (min-width: 992px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 
   header.masthead {
     min-height: 46rem;
@@ -553,18 +541,6 @@ header.masthead .masthead-subheading {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .insight-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1200px) {
-  .insight-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (min-width: 1400px) {
   .insight-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -572,6 +548,16 @@ header.masthead .masthead-subheading {
 }
 
 @media (min-width: 768px) {
+  .services-grid,
+  .portfolio-grid,
+  .insight-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .portfolio-item {
+    max-width: none;
+  }
+
   .page-section {
     padding: 9rem 0;
   }
@@ -631,12 +617,6 @@ header.masthead .masthead-subheading {
     font-size: 1.125rem;
   }
 
-  .service-circle {
-    width: 14rem;
-    height: 14rem;
-    border-width: 0.5rem;
-  }
-
   .service-title {
     margin-top: 1.25rem;
     font-size: 1.5rem;
@@ -664,8 +644,13 @@ header.masthead .masthead-subheading {
 
 @media (min-width: 992px) {
   .services-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3.5rem 2rem;
+  }
+
+  .service-circle {
+    width: 14rem;
+    height: 14rem;
+    border-width: 0.5rem;
   }
 }
 
