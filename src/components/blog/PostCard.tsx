@@ -41,7 +41,7 @@ export function PostCard({ post }: PostCardProps) {
         </p>
         <Link
           href={`/blog/${post.slug}`}
-          className="mt-6 inline-flex font-display text-sm font-bold text-ox-teal uppercase transition-colors hover:text-ox-teal-dark"
+          className="mt-6 inline-flex font-display text-sm font-bold text-ox-teal capitalize transition-colors hover:text-ox-teal-dark"
         >
           Read article
         </Link>

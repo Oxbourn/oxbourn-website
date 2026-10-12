@@ -1,24 +1,30 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 
+const footerLinks = [
+  { href: "/#what-we-do", label: "What We Do" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Insight" },
+  { href: "/#contact", label: "Contact" },
+] as const;
+
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="site-container">
-        <div className="footer-grid">
-          <p className="footer-copy">
-            Copyright © {new Date().getFullYear()} {site.legalName}
-          </p>
-          <div className="footer-meta">
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-            <a href={site.phoneHref}>{site.phone}</a>
-          </div>
-          <div className="footer-links">
-            <Link href="/#what-we-do">What We Do</Link>
-            <Link href="/about">About</Link>
-            <Link href="/blog">Insight</Link>
-            <Link href="/#contact">Contact</Link>
-          </div>
+      <div className="site-container footer-bar">
+        <p className="footer-copy">
+          © {new Date().getFullYear()} {site.legalName}
+        </p>
+        <nav className="footer-links" aria-label="Footer">
+          {footerLinks.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="footer-meta">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={site.phoneHref}>{site.phone}</a>
         </div>
       </div>
     </footer>

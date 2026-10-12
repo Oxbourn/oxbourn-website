@@ -14,7 +14,7 @@ export default function BlogNotFound() {
       <p className="mt-4 text-ox-muted">That article is not available.</p>
       <Link
         href="/blog"
-        className="mt-8 inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white uppercase"
+        className="mt-8 inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white capitalize"
       >
         View the blog
       </Link>
