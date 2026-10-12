@@ -37,28 +37,35 @@ export const hero = {
 export const helpsYou = [
   {
     title: "Structure Your Wealth",
-    body: "Organize your assets, businesses and ownership interests into a coherent whole.",
-    image: "/agency/hero/1.jpg",
+    body: "Organize your assets, businesses and ownership interests within an appropriate legal and governance framework. Establish ownership arrangements that protect your wealth, mitigate avoidable risks and support its long-term preservation. Align your wealth structures with your objectives to create a sound foundation for continuity across generations.",
   },
   {
-    title: "See Your Entire Wealth",
-    body: "Gain a consolidated view of your wealth across assets, entities and jurisdictions.",
-    image: "/agency/hero/2.jpg",
+    title: "View Your Entire Wealth",
+    body: "Gain a consolidated view of your wealth across assets, businesses, entities and jurisdictions. Understand what you own, how your assets are structured, where they are held and how they relate to one another. Make informed decisions based on a comprehensive understanding of your family's overall wealth.",
   },
   {
-    title: "Protect Your Wealth",
-    body: "Put the appropriate ownership, governance and protective arrangements around your wealth.",
-    image: "/agency/hero/3.jpg",
-  },
-  {
-    title: "Preserve Your Wealth",
-    body: "Establish the governance and stewardship needed to maintain wealth across generations.",
-    image: "/agency/hero/4.jpg",
+    title: "Institutionalize Your Wealth",
+    body: "Establish enduring structures that enable your wealth and operating businesses to function beyond your direct involvement. Put appropriate legal, governance and operational arrangements in place to support continuity, effective management and long-term sustainability, ensuring that what you have built does not depend entirely on your continued presence.",
   },
   {
     title: "Govern Your Wealth",
-    body: "Create clear frameworks for ownership, decision-making, responsibility and oversight.",
-    image: "/agency/hero/5.jpg",
+    body: "Establish clear frameworks for ownership, decision-making, responsibility and oversight. Define how wealth is governed, who exercises authority, how decisions are made and how accountability is maintained. Align governance arrangements with your family's objectives to promote responsible stewardship, effective coordination and continuity across generations.",
+  },
+  {
+    title: "Support Your Businesses",
+    body: "Strengthen the structure, governance and operations of your family-owned businesses. Establish effective management frameworks, improve operational efficiency and align business activities with your family's broader wealth objectives. Build sustainable enterprises that create lasting value, contribute to wealth preservation and remain viable across generations.",
+  },
+  {
+    title: "Plan Your Succession",
+    body: "Prepare for the transfer of wealth, ownership and responsibility to the next generation. Establish succession arrangements that clarify future ownership, address leadership transitions and support continuity. Align succession plans with your intentions and ensure that the structures holding your wealth and businesses remain effective through generational change.",
+  },
+  {
+    title: "Prepare the Next Generation",
+    body: "Equip the next generation with the knowledge, skills and sense of responsibility required to steward family wealth. Develop their understanding of wealth ownership, governance, business management and family responsibilities. Prepare future generations to participate meaningfully in decision-making and assume their roles in sustaining the family's wealth and legacy.",
+  },
+  {
+    title: "Coordinate Your Advisors",
+    body: "Bring your legal, tax, accounting, banking, investment and other professional advisors into a coordinated framework. Align their expertise with your wealth objectives, improve collaboration and reduce fragmentation in the management of your affairs. Ensure that professional advice and services work together within a coherent structure that supports your family's long-term objectives.",
   },
 ] as const;
 

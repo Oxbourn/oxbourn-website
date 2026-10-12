@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function WhatWeDo() {
   return (
-    <section id="what-we-do" className="page-section bg-white">
+    <section id="what-we-do" className="page-section bg-ox-mist">
       <div className="site-container">
         <SectionHeading
           kicker="Family office services designed around your wealth, governance and continuity."
@@ -13,22 +13,35 @@ export function WhatWeDo() {
         />
         <div className="services-grid">
           {services.map((service) => (
-            <article key={service.slug} className="service-item">
-              <Link href={`/what-we-do/${service.slug}`} className="service-circle group">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={448}
-                  height={448}
-                  className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </Link>
-              <h3 className="service-title">{service.title}</h3>
+            <Link
+              key={service.slug}
+              href={`/what-we-do/${service.slug}`}
+              className="service-card"
+            >
+              <div className="service-card-top">
+                <h3 className="service-title">{service.title}</h3>
+                <span className="service-card-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M5 12h12M13 6l6 6-6 6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
               <p className="service-copy">{service.summary}</p>
-              <Link href={`/what-we-do/${service.slug}`} className="service-more">
-                More →
-              </Link>
-            </article>
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={900}
+                height={560}
+                className="service-card-photo"
+              />
+            </Link>
           ))}
         </div>
       </div>

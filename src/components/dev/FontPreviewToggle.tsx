@@ -56,7 +56,7 @@ function applyPreset(id: FontPreset) {
 export function FontPreviewToggle() {
   const [visible, setVisible] = useState(false);
   const [open, setOpen] = useState(true);
-  const [active, setActive] = useState<FontPreset>("grotesk");
+  const [active, setActive] = useState<FontPreset>("modern");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -66,7 +66,7 @@ export function FontPreviewToggle() {
       ? fromQuery
       : params.has("fonts") && isPreset(saved)
         ? saved
-        : "grotesk";
+        : "modern";
 
     applyPreset(next);
     setActive(next);

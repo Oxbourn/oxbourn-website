@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <HowWeHelp />
-      <LatestFromBlog />
+      <LatestFromBlog surface="mist" />
       <Contact />
     </>
   );
