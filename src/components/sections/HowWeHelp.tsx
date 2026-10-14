@@ -3,12 +3,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function HowWeHelp() {
   return (
-    <section id="how-we-help" className="page-section bg-white">
+    <section id="how-we-help" className="page-section help-section">
       <div className="site-container">
-        <SectionHeading
-          kicker="Organize, protect, preserve and govern wealth as a whole."
-          title="Oxbourn Consulting Helps You"
-        />
+        <SectionHeading title="Oxbourn Consulting Helps You" />
         <div className="help-accordion">
           {helpsYou.map((item) => (
             <details key={item.title} className="help-item">

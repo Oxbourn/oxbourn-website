@@ -24,7 +24,7 @@ export function PostCard({ post }: PostCardProps) {
       </Link>
       <div className="flex flex-1 flex-col p-6">
         <p className="section-kicker text-[0.7rem] text-ox-teal">
-          {post.category ?? "Insight"}
+          {post.category ?? "Insights"}
         </p>
         <p className="mt-2 font-sans text-sm text-ox-muted">
           {formatPostDate(post.date)}
@@ -41,7 +41,7 @@ export function PostCard({ post }: PostCardProps) {
         </p>
         <Link
           href={`/blog/${post.slug}`}
-          className="mt-6 inline-flex font-display text-sm font-bold text-ox-teal capitalize transition-colors hover:text-ox-teal-dark"
+          className="mt-6 inline-flex font-display text-sm font-normal text-ox-teal capitalize transition-colors hover:text-ox-teal-dark"
         >
           Read article
         </Link>

@@ -2,12 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { hero } from "@/lib/site";
 
-export function Hero() {
+type HeroProps = {
+  heading?: string;
+  subheading?: string;
+  cta?: string;
+  ctaHref?: string;
+  image?: string;
+};
+
+export function Hero({
+  heading = hero.heading,
+  subheading = hero.subheading,
+  cta = hero.cta,
+  ctaHref = hero.ctaHref,
+  image = hero.image,
+}: HeroProps) {
   return (
     <header className="masthead" id="page-top">
       <Image
-        src={hero.image}
-        alt={hero.heading}
+        src={image}
+        alt={heading}
         fill
         priority
         sizes="100vw"
@@ -16,10 +30,10 @@ export function Hero() {
       <div className="masthead-overlay" />
       <div className="site-container relative z-10">
         <div className="masthead-copy">
-          <h1 className="masthead-heading">{hero.heading}</h1>
-          <p className="masthead-subheading">{hero.subheading}</p>
-          <Link href={hero.ctaHref} className="btn-agency btn-agency-xl">
-            {hero.cta}
+          <h1 className="masthead-heading">{heading}</h1>
+          <p className="masthead-subheading">{subheading}</p>
+          <Link href={ctaHref} className="btn-agency btn-agency-xl">
+            {cta}
           </Link>
         </div>
       </div>

@@ -5,8 +5,6 @@ export function About() {
   return (
     <section id="about" className="page-section bg-white">
       <div className="site-container">
-        <p className="section-kicker mb-3 text-ox-teal">{about.kicker}</p>
-        <h1 className="page-title">{about.title}</h1>
         <div className="about-layout">
           <div className="about-copy">
             {about.paragraphs.map((paragraph) => (

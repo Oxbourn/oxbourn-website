@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { About } from "@/components/sections/About";
+import { Hero } from "@/components/sections/Hero";
 import { about } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -9,8 +10,15 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="pt-20 md:pt-24">
+    <>
+      <Hero
+        heading={about.title}
+        subheading={about.kicker}
+        cta="Contact us"
+        ctaHref="/#contact"
+        image={about.heroImage}
+      />
       <About />
-    </div>
+    </>
   );
 }

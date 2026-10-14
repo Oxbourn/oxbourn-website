@@ -17,7 +17,7 @@ export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps)
       className={`page-section ${surface === "mist" ? "bg-ox-mist" : "bg-white"}`}
     >
       <div className="site-container">
-        <SectionHeading kicker={blog.intro} title={blog.title} />
+        <SectionHeading title={blog.title} />
 
         {posts.length === 0 ? (
           <p className="text-center text-ox-muted">
@@ -36,7 +36,7 @@ export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps)
             href="/blog"
             className="btn-agency"
           >
-            More Insight
+            More Insights
           </Link>
         </div>
       </div>

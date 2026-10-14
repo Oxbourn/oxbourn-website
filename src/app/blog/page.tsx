@@ -7,7 +7,7 @@ import { getPosts } from "@/lib/wordpress";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Insight",
+  title: "Insights",
   description: blog.intro,
 };
 
@@ -17,7 +17,7 @@ export default async function BlogPage() {
   return (
     <section className="bg-ox-mist pt-32 pb-24">
       <div className="site-container">
-        <SectionHeading kicker={blog.intro} title={blog.title} />
+        <SectionHeading title={blog.title} />
 
         {posts.length === 0 ? (
           <p className="text-center text-ox-muted">

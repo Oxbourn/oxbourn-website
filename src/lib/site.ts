@@ -14,13 +14,13 @@ export const site = {
 export const navItems = [
   { href: "/#what-we-do", label: "What We Do" },
   { href: "/about", label: "About" },
-  { href: "/#insights", label: "Insight" },
+  { href: "/#insights", label: "Insights" },
   { href: "/#contact", label: "Contact" },
 ] as const;
 
 export const blog = {
   kicker: "Family wealth, governance, and continuity",
-  title: "Insight",
+  title: "Insights",
   intro:
     "Perspectives on family offices, wealth structuring, governance, succession, and preparing the next generation.",
 } as const;
@@ -179,6 +179,7 @@ export function getService(slug: string): Service | undefined {
 export const about = {
   kicker: "Exclusive family office consulting",
   title: "About Us",
+  heroImage: "/agency/about/1.jpg",
   image: "/agency/services/family-office.jpg",
   paragraphs: [
     "Oxbourn Consulting is Nigeria's first exclusive family office consulting firm, primarily dedicated to helping families and individuals structure their wealth and establish a family office to manage that wealth across all asset classes, preserve it and seamlessly transfer it from one generation to the next.",

@@ -48,9 +48,11 @@ function isPreset(value: string | null): value is FontPreset {
   return PRESETS.some((preset) => preset.id === value);
 }
 
-function applyPreset(id: FontPreset) {
+function applyPreset(id: FontPreset, persist = true) {
   document.documentElement.setAttribute("data-fonts", id);
-  sessionStorage.setItem(STORAGE_KEY, id);
+  if (persist) {
+    sessionStorage.setItem(STORAGE_KEY, id);
+  }
 }
 
 export function FontPreviewToggle() {
@@ -62,15 +64,16 @@ export function FontPreviewToggle() {
     const params = new URLSearchParams(window.location.search);
     const fromQuery = params.get("fonts");
     const saved = sessionStorage.getItem(STORAGE_KEY);
+    const preview = params.has("fonts");
     const next = isPreset(fromQuery)
       ? fromQuery
-      : params.has("fonts") && isPreset(saved)
+      : preview && isPreset(saved)
         ? saved
         : "modern";
 
-    applyPreset(next);
+    applyPreset(next, preview);
     setActive(next);
-    setVisible(params.has("fonts"));
+    setVisible(preview);
     setOpen(true);
 
     const onKey = (event: KeyboardEvent) => {

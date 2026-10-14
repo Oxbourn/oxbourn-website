@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 export default function BlogNotFound() {
   return (
     <section className="px-5 pt-36 pb-24 text-center">
-      <h1 className="font-display text-3xl font-bold text-ox-navy uppercase">
+      <h1 className="font-display text-3xl font-bold text-ox-navy capitalize">
         Post not found
       </h1>
       <p className="mt-4 text-ox-muted">That article is not available.</p>
       <Link
         href="/blog"
-        className="mt-8 inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-bold text-white capitalize"
+        className="mt-8 inline-flex rounded bg-ox-teal px-10 py-5 font-display text-[1.125rem] font-normal text-white capitalize"
       >
         View the blog
       </Link>

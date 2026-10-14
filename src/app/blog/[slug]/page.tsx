@@ -52,7 +52,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <ol className="flex flex-wrap items-center gap-2 text-sm text-ox-muted">
               <li>
                 <Link href="/blog" className="text-ox-teal hover:text-ox-teal-dark">
-                  Insight
+                  Insights
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <p className="mt-6 font-sans text-sm text-ox-muted">
             {formatPostDate(post.date)}
             <span className="mx-2 text-ox-teal">•</span>
-            {post.category ?? "Insight"}
+            {post.category ?? "Insights"}
             <span className="mx-2 text-ox-teal">•</span>
             {post.readingMinutes} min read
           </p>
@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {related[0] ? (
               <div className="mt-8 hidden lg:block">
                 <p className="section-kicker text-[0.7rem] text-ox-teal">
-                  More Insight
+                  More Insights
                 </p>
                 <div className="mt-4">
                   <PostCard post={related[0]} />

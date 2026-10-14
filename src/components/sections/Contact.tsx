@@ -11,11 +11,7 @@ export function Contact() {
   return (
     <section id="contact" className="page-section">
       <div className="site-container">
-        <SectionHeading
-          kicker="Discuss your family’s wealth, governance and continuity objectives with Oxbourn Consulting."
-          title="Contact Us"
-          light
-        />
+        <SectionHeading title="Contact Us" light />
         <form id="contactForm" onSubmit={handleSubmit}>
           <div className="contact-form-grid">
             <div>

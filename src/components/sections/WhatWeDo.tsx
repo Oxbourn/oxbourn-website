@@ -7,10 +7,7 @@ export function WhatWeDo() {
   return (
     <section id="what-we-do" className="page-section bg-ox-mist">
       <div className="site-container">
-        <SectionHeading
-          kicker="Family office services designed around your wealth, governance and continuity."
-          title="What We Do"
-        />
+        <SectionHeading title="What We Do" />
         <div className="services-grid">
           {services.map((service) => (
             <Link
