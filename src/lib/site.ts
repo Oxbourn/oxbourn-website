@@ -168,6 +168,34 @@ export const services = [
     cover:
       "Wealth education, family governance, ownership responsibilities, financial literacy, business understanding, investment awareness, leadership development, family values and preparation for roles within the family office.",
   },
+  {
+    slug: "operating-business-advisory",
+    title: "Operating Business Advisory",
+    image: "/agency/services/operating-business.jpg",
+    summary:
+      "Helping family-owned businesses establish effective management structures, sound operational processes and clear accountability for sustainable growth.",
+    paragraphs: [
+      "Family-owned businesses require effective management structures, sound operational processes and clear accountability to remain sustainable and contribute to the family's long-term wealth objectives.",
+      "Oxbourn Consulting helps families like yours to strengthen the management and operations of their businesses by establishing appropriate organizational structures, improving business processes and aligning operational activities with strategic objectives.",
+      "Our approach focuses on building well-structured, professionally managed enterprises that can operate efficiently, reduce dependence on individual owners and support sustainable business growth across generations.",
+    ],
+    cover:
+      "Business process improvement, organizational structuring, operational efficiency, management systems, performance management, corporate governance, business strategy implementation and operational reviews.",
+  },
+  {
+    slug: "asset-protection-advisory",
+    title: "Asset Protection Advisory",
+    image: "/agency/services/asset-protection.jpg",
+    summary:
+      "Helping families protect wealth by reviewing how assets are owned, structured and safeguarded against legal, business and other risks.",
+    paragraphs: [
+      "Protecting family wealth requires careful consideration of how assets are owned, structured and safeguarded against potential risks. Without adequate protection, wealth may be exposed to legal disputes, business liabilities, creditor claims and other threats that could undermine its long-term preservation.",
+      "Oxbourn Consulting helps families like yours to identify potential vulnerabilities in their wealth structures and work with relevant legal, tax and financial professionals to develop effective asset protection strategies.",
+      "Our approach focuses on aligning asset ownership, legal structures and governance frameworks with the family's circumstances and objectives to protect wealth and support its preservation across generations.",
+    ],
+    cover:
+      "Asset protection strategy, ownership risk assessment, liability exposure review, asset segregation, holding structures, protection of business and personal assets, legal structure review and coordination with legal and tax advisors.",
+  },
 ] as const;
 
 export type Service = (typeof services)[number];

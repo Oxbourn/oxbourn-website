@@ -36,6 +36,8 @@ export function WhatWeDo() {
                 alt={service.title}
                 width={900}
                 height={560}
+                quality={90}
+                sizes="(min-width: 768px) 33vw, 100vw"
                 className="service-card-photo"
               />
             </Link>

@@ -73,6 +73,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 alt={service.title}
                 width={900}
                 height={1100}
+                quality={90}
+                sizes="(min-width: 768px) 40vw, 100vw"
                 className="service-page-photo"
               />
             </div>
