@@ -24,6 +24,7 @@ export function Hero({
         alt={heading}
         fill
         priority
+        quality={90}
         sizes="100vw"
         className="object-cover object-[center_30%]"
       />

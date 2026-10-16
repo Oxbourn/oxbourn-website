@@ -206,6 +206,20 @@ section[id] {
 
 .navbar-brand {
   display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.7rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-brand-mark {
+  display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   width: 3.15rem;
@@ -213,6 +227,18 @@ section[id] {
   border-radius: 999px;
   background: #fff;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.navbar-wordmark {
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .navbar-logo {
@@ -272,8 +298,16 @@ section[id] {
   }
 
   .navbar-brand {
+    gap: 0.85rem;
+  }
+
+  .navbar-brand-mark {
     width: 3.6rem;
     height: 3.6rem;
+  }
+
+  .navbar-wordmark {
+    font-size: 1.05rem;
   }
 
   .navbar-logo {
@@ -353,7 +387,7 @@ header.masthead .masthead-subheading {
 }
 
 .btn-agency-xl {
-  padding: 1.1rem 2.4rem;
+  padding: 0.9rem 1.95rem;
   font-size: 1.05rem;
   letter-spacing: 0.02em;
 }
@@ -382,11 +416,18 @@ header.masthead .masthead-subheading {
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.85rem;
+  min-height: 4rem;
   padding-bottom: 0.85rem;
   border-bottom: 1px solid #e6eaec;
 }
 
 .service-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  min-height: 2.5em;
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -416,9 +457,10 @@ header.masthead .masthead-subheading {
 .service-copy {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
+  min-height: calc(1.55em * 3);
   margin: 0.9rem 0 1rem;
   font-size: 0.95rem;
   font-weight: 300;
@@ -694,12 +736,16 @@ header.masthead .masthead-subheading {
   }
 
   .btn-agency-xl {
-    padding: 1.25rem 2.75rem;
+    padding: 1.05rem 2.2rem;
     font-size: 1.125rem;
   }
 
   .service-title {
     font-size: 1.35rem;
+  }
+
+  .service-card-top {
+    min-height: 4.35rem;
   }
 
   .portfolio-caption-heading {
@@ -710,6 +756,10 @@ header.masthead .masthead-subheading {
   .portfolio-caption-subheading {
     font-size: 1rem;
     line-height: 1.75;
+  }
+
+  .service-copy {
+    min-height: calc(1.75em * 3);
   }
 
   .help-accordion {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
+import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
 import { about } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function AboutPage() {
         image={about.heroImage}
       />
       <About />
+      <LatestFromBlog surface="mist" />
     </>
   );
 }

@@ -14,7 +14,7 @@ export const site = {
 export const navItems = [
   { href: "/#what-we-do", label: "What We Do" },
   { href: "/about", label: "About" },
-  { href: "/#insights", label: "Insights" },
+  { href: "/blog", label: "Insights" },
   { href: "/#contact", label: "Contact" },
 ] as const;
 
@@ -23,6 +23,7 @@ export const blog = {
   title: "Insights",
   intro:
     "Perspectives on family offices, wealth structuring, governance, succession, and preparing the next generation.",
+  heroImage: "/hero/insights.jpg",
 } as const;
 
 export const hero = {
@@ -128,7 +129,7 @@ export const services = [
   },
   {
     slug: "family-office-management-advisory",
-    title: "Family Office Management & Advisory",
+    title: "Family Office Advisory",
     image: "/agency/services/advisory.jpg",
     summary:
       "Providing ongoing strategic oversight, coordination and advisory support to help your family office remain aligned with your family’s objectives and growing wealth.",
@@ -207,7 +208,7 @@ export function getService(slug: string): Service | undefined {
 export const about = {
   kicker: "Exclusive family office consulting",
   title: "About Us",
-  heroImage: "/agency/about/1.jpg",
+  heroImage: "/hero/about.jpg",
   image: "/agency/services/family-office.jpg",
   paragraphs: [
     "Oxbourn Consulting is Nigeria's first exclusive family office consulting firm, primarily dedicated to helping families and individuals structure their wealth and establish a family office to manage that wealth across all asset classes, preserve it and seamlessly transfer it from one generation to the next.",
