@@ -1,11 +1,11 @@
-import Link from "next/link";
 import { site } from "@/lib/site";
+import Link from "next/link";
 
 const footerLinks = [
   { href: "/#what-we-do", label: "What We Do" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Insights" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export function Footer() {

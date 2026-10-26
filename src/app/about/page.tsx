@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
 import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
 import { about } from "@/lib/site";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,7 +16,7 @@ export default function AboutPage() {
         heading={about.title}
         subheading={about.kicker}
         cta="Contact us"
-        ctaHref="/#contact"
+        ctaHref="/contact"
         image={about.heroImage}
       />
       <About />

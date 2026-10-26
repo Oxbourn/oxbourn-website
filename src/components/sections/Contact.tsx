@@ -1,7 +1,7 @@
 "use client";
 
-import { FormEvent } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FormEvent } from "react";
 
 export function Contact() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -11,7 +11,7 @@ export function Contact() {
   return (
     <section id="contact" className="page-section">
       <div className="site-container">
-        <SectionHeading title="Contact Us" light />
+        <SectionHeading title="Send Us a Message" light />
         <form id="contactForm" onSubmit={handleSubmit}>
           <div className="contact-form-grid">
             <div>

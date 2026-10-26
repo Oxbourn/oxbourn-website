@@ -1,5 +1,5 @@
-import path from "node:path";
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/services", destination: "/#what-we-do", permanent: true },
-      { source: "/get-in-touch", destination: "/#contact", permanent: true },
+      { source: "/get-in-touch", destination: "/contact", permanent: true },
     ];
   },
   images: {

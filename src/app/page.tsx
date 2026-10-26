@@ -1,4 +1,3 @@
-import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { HowWeHelp } from "@/components/sections/HowWeHelp";
 import { LatestFromBlog } from "@/components/sections/LatestFromBlog";
@@ -13,7 +12,6 @@ export default function Home() {
       <WhatWeDo />
       <HowWeHelp />
       <LatestFromBlog surface="mist" />
-      <Contact />
     </>
   );
 }

@@ -85,7 +85,7 @@ function rewriteWpLinks(html: string) {
       .replace(new RegExp(`${escaped}/blog/?`, "g"), "/blog")
       .replace(new RegExp(`${escaped}/about-us/?`, "g"), "/about")
       .replace(new RegExp(`${escaped}/services/?`, "g"), "/#services")
-      .replace(new RegExp(`${escaped}/get-in-touch/?`, "g"), "/#contact")
+      .replace(new RegExp(`${escaped}/get-in-touch/?`, "g"), "/contact")
       .replace(
         new RegExp(
           `${escaped}/(?!wp-|wp/|category/|author/|tag/|feed/?)([^"'\\s/<]+)/?`,

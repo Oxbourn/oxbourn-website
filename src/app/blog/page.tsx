@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { PostCard } from "@/components/blog/PostCard";
 import { Hero } from "@/components/sections/Hero";
 import { blog } from "@/lib/site";
 import { getPosts } from "@/lib/wordpress";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 
@@ -20,7 +20,7 @@ export default async function BlogPage() {
         heading={blog.title}
         subheading={blog.intro}
         cta="Contact us"
-        ctaHref="/#contact"
+        ctaHref="/contact"
         image={blog.heroImage}
       />
       <section className="page-section bg-ox-mist">

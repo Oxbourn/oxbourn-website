@@ -1,10 +1,10 @@
+import { PostCard } from "@/components/blog/PostCard";
+import { site } from "@/lib/site";
+import { formatPostDate, getPostBySlug, getPosts } from "@/lib/wordpress";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PostCard } from "@/components/blog/PostCard";
-import { site } from "@/lib/site";
-import { formatPostDate, getPostBySlug, getPosts } from "@/lib/wordpress";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <p className="mt-3 text-sm leading-6 text-white/75">
                 Discuss your family’s wealth, governance and continuity with Oxbourn Consulting.
               </p>
-              <Link href="/#contact" className="btn-agency mt-6">
+              <Link href="/contact" className="btn-agency mt-6">
                 Contact us
               </Link>
             </div>
