@@ -60,25 +60,6 @@ export default function ContactPage() {
                 <span className="contact-info-value">{site.phone}</span>
               </a>
             </li>
-            <li>
-              <div className="contact-info-item">
-                <svg
-                  className="contact-info-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <span className="contact-info-label">Office</span>
-                <span className="contact-info-value">{site.address}</span>
-              </div>
-            </li>
           </ul>
         </div>
       </section>
