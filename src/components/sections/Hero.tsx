@@ -26,14 +26,14 @@ export function Hero({
         priority
         quality={90}
         sizes="100vw"
-        className="object-cover object-[center_30%]"
+        className="object-cover masthead-photo"
       />
       <div className="masthead-overlay" />
       <div className="site-container relative z-10">
         <div className="masthead-copy">
           <h1 className="masthead-heading">{heading}</h1>
           <p className="masthead-subheading">{subheading}</p>
-          <Link href={ctaHref} className="btn-agency btn-agency-xl">
+          <Link href={ctaHref} className="btn-agency">
             {cta}
           </Link>
         </div>

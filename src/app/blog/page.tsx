@@ -19,8 +19,8 @@ export default async function BlogPage() {
       <Hero
         heading={blog.title}
         subheading={blog.intro}
-        cta="Contact us"
-        ctaHref="/contact"
+        cta="Learn more"
+        ctaHref="/#what-we-do"
         image={blog.heroImage}
       />
       <section className="page-section bg-ox-mist">

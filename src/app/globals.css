@@ -315,12 +315,18 @@ header.masthead {
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
-  min-height: 34rem;
-  padding-top: 8.5rem;
-  padding-bottom: 3.25rem;
+  min-height: 30rem;
+  padding-top: 7.5rem;
+  padding-bottom: 2.75rem;
   text-align: left;
   color: #fff;
   background-color: var(--ox-navy);
+}
+
+/* Portrait-width screens crop most of a landscape photo away, so the mobile
+   frame is anchored slightly left of centre to keep the subject in view. */
+header.masthead .masthead-photo {
+  object-position: 30% 35%;
 }
 
 header.masthead .masthead-overlay {
@@ -341,7 +347,7 @@ header.masthead .masthead-copy {
 header.masthead .masthead-heading {
   margin: 0 0 0.85rem;
   font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -350,7 +356,7 @@ header.masthead .masthead-subheading {
   max-width: 32rem;
   margin: 0 0 1.6rem;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-style: normal;
   font-weight: 300;
   line-height: 1.55;
@@ -640,22 +646,6 @@ header.masthead .masthead-subheading {
 
 @media (min-width: 980px) {
 
-  header.masthead {
-    min-height: 46rem;
-  }
-
-  header.masthead .masthead-copy {
-    max-width: 42rem;
-  }
-
-  header.masthead .masthead-heading {
-    font-size: 3rem;
-  }
-
-  header.masthead .masthead-subheading {
-    font-size: 1.3rem;
-  }
-
   .portfolio-image {
     height: 16rem;
   }
@@ -729,15 +719,19 @@ header.masthead .masthead-subheading {
     padding-bottom: 5rem;
   }
 
+  header.masthead .masthead-photo {
+    object-position: center 30%;
+  }
+
   header.masthead .masthead-heading {
     margin-bottom: 1rem;
-    font-size: 2.65rem;
+    font-size: 2.9rem;
     line-height: 1.18;
   }
 
   header.masthead .masthead-subheading {
     margin-bottom: 1.85rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.55;
   }
 
@@ -798,6 +792,24 @@ header.masthead .masthead-subheading {
 }
 
 @media (min-width: 980px) {
+  /* Large-screen masthead scale lives here so it wins over the 768px tier
+     regardless of source order further up the file. */
+  header.masthead {
+    min-height: 46rem;
+  }
+
+  header.masthead .masthead-copy {
+    max-width: 42rem;
+  }
+
+  header.masthead .masthead-heading {
+    font-size: 3rem;
+  }
+
+  header.masthead .masthead-subheading {
+    font-size: 1.35rem;
+  }
+
   .services-grid {
     gap: 1.75rem;
   }

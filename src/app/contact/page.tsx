@@ -15,8 +15,8 @@ export default function ContactPage() {
       <Hero
         heading="Contact Us"
         subheading="Tell us about your family's wealth, governance and continuity goals — and how we can help."
-        cta="Email us"
-        ctaHref={`mailto:${site.email}`}
+        cta="Learn more"
+        ctaHref="/#what-we-do"
         image="/hero/banner.jpg"
       />
 

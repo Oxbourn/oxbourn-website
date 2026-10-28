@@ -15,8 +15,8 @@ export default function AboutPage() {
       <Hero
         heading={about.title}
         subheading={about.kicker}
-        cta="Contact us"
-        ctaHref="/contact"
+        cta="Learn more"
+        ctaHref="/#what-we-do"
         image={about.heroImage}
       />
       <About />
