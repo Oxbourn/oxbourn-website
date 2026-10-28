@@ -914,3 +914,98 @@ The accordion will appear in this format
     Copy: eight Helps You items in this file (863–897).
     Old oxbournconsulting.com Grow/CEO cards are reference only, not the accordion.
  */
+
+
+    /**
+     Below are the updated pages for "What We Do".
+
+Family Office Setup
+
+A family office should be deliberately designed around the family’s circumstances, wealth, objectives and long-term vision.
+
+Oxbourn Consulting helps families establish and institutionalize their own family offices, from defining the office’s purpose and scope to designing its governance, operating model, roles and responsibilities, and relationships with external advisors.
+
+Our approach considers the family’s businesses, investments, properties, ownership interests, jurisdictions and succession objectives to establish an office equipped to coordinate and oversee the family’s wealth as a whole across generations.
+
+Our services cover family office strategy, readiness assessment, purpose and mandate, wealth mapping, governance, operating model, roles and responsibilities, advisor integration, implementation and ongoing review.
+
+Wealth Structuring
+
+As wealth expands across businesses, investments, properties and jurisdictions, the structures through which it is owned and controlled become increasingly important.
+
+Oxbourn Consulting helps families determine how their wealth should be structured, from the ownership of individual assets and operating businesses to the establishment of holding companies, family investment companies and trusts.
+
+We work with legal, tax and financial professionals to develop ownership structures that reflect the family’s objectives, clarify control, facilitate effective governance and support the continuity and transfer of wealth across generations.
+
+Our work covers ownership structuring, holding company design, family investment companies, trust structures, asset protection, cross-border wealth structuring and the alignment of ownership with family governance and succession plans.
+
+Family Governance
+
+As family wealth grows and passes across generations, clear rules are needed to guide decision-making, define authority, allocate responsibilities and establish how family members participate in the ownership and stewardship of wealth.
+
+Oxbourn Consulting helps families establish governance frameworks that define the relationship between the family, its wealth and the structures through which that wealth is owned and managed.
+
+The objective is to establish clear principles and processes for governing family wealth, resolving differences, making collective decisions and preparing successive generations to assume their responsibilities.
+
+Our service covers family governance frameworks, family constitutions, family councils, decision-making protocols, roles and authority, family policies and periodic governance review.
+
+Succession & Wealth Transfer
+
+Preserving wealth across generations requires more than transferring assets. It requires preparing the people who will inherit the wealth, determining how ownership and control will pass, and establishing the governance structures needed to sustain the family’s wealth across generations.
+
+Oxbourn Consulting helps families plan for the transition of ownership, leadership and responsibility from one generation to the next, ensuring that these transitions are aligned with the family’s long-term objectives.
+
+We work with legal, tax and financial advisors to develop succession and wealth transfer plans that address the family’s ownership structures, business interests, governance and next-generation readiness.
+
+Our services cover succession planning, ownership transition, leadership succession, wealth transfer planning, family readiness, governance continuity, next-generation preparation.
+
+Family Office Advisory
+
+Establishing a family office is only the beginning. Its structure, priorities and operations must evolve as the family’s wealth, circumstances and objectives change.
+
+Oxbourn Consulting provides ongoing management and strategic advisory support to help families maintain effective oversight of their wealth, strengthen governance and ensure that each family office continues to serve the family’s evolving needs.
+
+We work with families to assess the effectiveness of their family office, address operational and governance gaps, coordinate professional advisors and align the office’s activities with the family’s long-term objectives.
+
+We cover family office management, strategic advisory, governance support, advisor coordination, performance reviews, implementation support, policy development and operational improvement.
+
+Asset Protection Advisory
+
+Protecting family wealth requires deliberate decisions about asset ownership, legal structures and the separation of personal wealth from business risks. Without appropriate safeguards, family assets may be exposed to business liabilities, creditor claims, legal disputes and other threats that compromise their long-term preservation.
+
+Oxbourn Consulting helps families assess the vulnerabilities in their wealth structures and develop asset protection strategies in collaboration with legal, tax and financial professionals.
+
+We focus on structuring ownership and separating assets and liabilities in ways that reflect the family’s circumstances, reduce exposure to foreseeable risks and support the preservation of wealth across generations.
+
+We cover asset protection strategy, ownership risk assessment, liability exposure review, asset segregation, holding company structures, separation of business and personal assets, legal structure review.
+
+Operating Business Advisory
+
+Family-owned businesses require sound management, efficient operations and clear accountability to sustain performance, support growth and contribute to the family’s long-term wealth objectives.
+
+Oxbourn Consulting helps families improve the performance of their businesses by establishing appropriate organizational structures, improving operational processes and introducing management systems that support effective execution and accountability.
+
+Our focus is on building professionally managed enterprises that can operate independently of their owners’ day-to-day involvement, adapt to changing business conditions and sustain performance across generations.
+
+Our work includes business process improvement, organizational design, operational efficiency, management systems, performance management, corporate governance, strategy implementation and operational reviews.
+
+Wealth Reporting & Technology
+
+A family cannot effectively oversee or manage its wealth without a consolidated view of what it owns, how its assets are structured and how its wealth is performing.
+
+Oxbourn Consulting helps families like yours establish a consolidated 360° view of their wealth across asset classes, entities and jurisdictions, bringing together the information needed to understand and oversee their entire wealth.
+
+By consolidating information that would otherwise remain scattered across statements, entities and professional advisors, we enable families to gain visibility into their holdings, ownership structures, valuations, performance and liabilities, providing a reliable basis for oversight and informed decision-making.
+
+We cover wealth consolidation, wealth mapping, asset and entity reporting, ownership visibility, valuation tracking, document management, reporting dashboards and technology-enabled wealth oversight.
+
+Next-Gen Training & Education
+
+The continuity of family wealth depends not only on what the family owns, but on whether the next generation is prepared to assume the responsibilities of ownership, governance and stewardship.
+
+Oxbourn Consulting helps families prepare the next generation to understand the family’s wealth, businesses and governance structures, while developing the knowledge and capabilities required to participate meaningfully in the family’s affairs and take on future responsibilities.
+
+Our focus extends beyond financial literacy to developing informed, responsible family members who understand the obligations of wealth ownership and are prepared to contribute to its preservation and growth across generations.
+
+We cover wealth education, family governance, ownership responsibilities, financial literacy, business understanding, investment awareness, leadership development, family values and preparation for roles within the family office.
+     */
