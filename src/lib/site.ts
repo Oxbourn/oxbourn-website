@@ -78,9 +78,9 @@ export const services = [
     summary:
       "Establishing a family office designed around your family’s wealth, governance, objectives and long-term continuity.",
     paragraphs: [
-      "A family office should be deliberately established around the family’s circumstances, wealth, objectives and long-term vision.",
-      "Oxbourn Consulting helps families like yours to establish and institutionalize their own family offices, from defining the purpose and scope of the office to establishing its governance, operating model, responsibilities and relationships with external advisors.",
-      "Our approach considers the family’s businesses, investments, properties, ownership interests, jurisdictions and succession objectives to establish an office capable of coordinating the family’s wealth as a whole across generations.",
+      "A family office should be deliberately designed around the family’s circumstances, wealth, objectives and long-term vision.",
+      "Oxbourn Consulting helps families establish and institutionalize their own family offices, from defining the office’s purpose and scope to designing its governance, operating model, roles and responsibilities, and relationships with external advisors.",
+      "Our approach considers the family’s businesses, investments, properties, ownership interests, jurisdictions and succession objectives to establish an office equipped to coordinate and oversee the family’s wealth as a whole across generations.",
     ],
     cover:
       "Family office strategy, readiness assessment, purpose and mandate, wealth mapping, governance, operating model, roles and responsibilities, advisor integration, implementation and ongoing review.",
@@ -92,12 +92,12 @@ export const services = [
     summary:
       "Organizing ownership, entities, assets and interests into a coherent structure that supports protection, governance and long-term preservation of your wealth.",
     paragraphs: [
-      "As wealth expands across businesses, investments, properties, entities and jurisdictions, how that wealth is owned and organized becomes increasingly important.",
-      "Oxbourn Consulting helps families like your own to review and organize how their businesses, investments, properties, trusts and other assets are owned and structured, working with legal, tax and financial professionals where specialist advice is required.",
-      "The objective is to establish ownership structures that support wealth protection, governance, control, continuity and the successful transfer of wealth across generations.",
+      "As wealth expands across businesses, investments, properties and jurisdictions, the structures through which it is owned and controlled become increasingly important.",
+      "Oxbourn Consulting helps families determine how their wealth should be structured, from the ownership of individual assets and operating businesses to the establishment of holding companies, family investment companies and trusts.",
+      "We work with legal, tax and financial professionals to develop ownership structures that reflect the family’s objectives, clarify control, facilitate effective governance and support the continuity and transfer of wealth across generations.",
     ],
     cover:
-      "Ownership review, entity structuring, holding structures, family investment companies, trusts, asset protection considerations, cross-border arrangements and alignment of legal structures with family objectives.",
+      "Ownership structuring, holding company design, family investment companies, trust structures, asset protection, cross-border wealth structuring and the alignment of ownership with family governance and succession plans.",
   },
   {
     slug: "family-governance",
@@ -106,12 +106,12 @@ export const services = [
     summary:
       "Establishing the frameworks through which your family's wealth, ownership and decision-making are governed across generations.",
     paragraphs: [
-      "Family wealth requires more than legal ownership. It requires clear principles for how decisions are made, who has authority, how responsibilities are assigned and how family members participate.",
-      "Oxbourn Consulting helps families like yours to establish governance arrangements that provide clarity around ownership, decision-making, family participation and stewardship of wealth.",
-      "The aim is to create a framework that remains effective as the family grows and successive generations become involved.",
+      "As family wealth grows and passes across generations, clear rules are needed to guide decision-making, define authority, allocate responsibilities and establish how family members participate in the ownership and stewardship of wealth.",
+      "Oxbourn Consulting helps families establish governance frameworks that define the relationship between the family, its wealth and the structures through which that wealth is owned and managed.",
+      "The objective is to establish clear principles and processes for governing family wealth, resolving differences, making collective decisions and preparing successive generations to assume their responsibilities.",
     ],
     cover:
-      "Family governance frameworks, family constitutions, family councils, decision-making frameworks, roles and responsibilities, family policies and governance review.",
+      "Family governance frameworks, family constitutions, family councils, decision-making protocols, roles and authority, family policies and periodic governance review.",
   },
   {
     slug: "succession-wealth-transfer",
@@ -120,12 +120,12 @@ export const services = [
     summary:
       "Preparing your family, your wealth and your ownership arrangements for an orderly transition from one generation to the next.",
     paragraphs: [
-      "Preserving wealth across generations requires more than transferring assets. The family must also prepare the people, ownership arrangements and governance mechanisms that will carry the wealth forward.",
-      "Oxbourn Consulting helps families like yours to plan for the transition of ownership, control, responsibility and wealth from one generation to the next.",
-      "We coordinate the relevant legal, tax, financial and family requirements to ensure that succession arrangements reflect the family’s long-term objectives.",
+      "Preserving wealth across generations requires more than transferring assets. It requires preparing the people who will inherit the wealth, determining how ownership and control will pass, and establishing the governance structures needed to sustain the family’s wealth across generations.",
+      "Oxbourn Consulting helps families plan for the transition of ownership, leadership and responsibility from one generation to the next, ensuring that these transitions are aligned with the family’s long-term objectives.",
+      "We work with legal, tax and financial advisors to develop succession and wealth transfer plans that address the family’s ownership structures, business interests, governance and next-generation readiness.",
     ],
     cover:
-      "Succession planning, ownership transition, leadership transition, wealth transfer planning, family readiness, governance continuity, next-generation involvement and coordination with legal and tax advisors.",
+      "Succession planning, ownership transition, leadership succession, wealth transfer planning, family readiness, governance continuity, next-generation preparation.",
   },
   {
     slug: "family-office-management-advisory",
@@ -134,12 +134,40 @@ export const services = [
     summary:
       "Providing ongoing strategic oversight, coordination and advisory support to help your family office remain aligned with your family’s objectives and growing wealth.",
     paragraphs: [
-      "Establishing a family office is only the beginning. The office must continue to evolve as the family, its wealth and its objectives change.",
-      "Oxbourn Consulting provides ongoing management and strategic advisory support to help families like your own to maintain alignment across their wealth, governance and family office activities.",
-      "We help the family office maintain oversight, coordinate professional advisors and ensure that decisions remain connected to the family’s broader objectives.",
+      "Establishing a family office is only the beginning. Its structure, priorities and operations must evolve as the family’s wealth, circumstances and objectives change.",
+      "Oxbourn Consulting provides ongoing management and strategic advisory support to help families maintain effective oversight of their wealth, strengthen governance and ensure that each family office continues to serve the family’s evolving needs.",
+      "We work with families to assess the effectiveness of their family office, address operational and governance gaps, coordinate professional advisors and align the office’s activities with the family’s long-term objectives.",
     ],
     cover:
-      "Family office management, strategic advisory, governance support, advisor coordination, periodic reviews, implementation support, policy development and ongoing family office improvement.",
+      "Family office management, strategic advisory, governance support, advisor coordination, performance reviews, implementation support, policy development and operational improvement.",
+  },
+  {
+    slug: "asset-protection-advisory",
+    title: "Asset Protection Advisory",
+    image: "/agency/services/asset-protection.jpg",
+    summary:
+      "Helping families protect wealth by reviewing how assets are owned, structured and safeguarded against legal, business and other risks.",
+    paragraphs: [
+      "Protecting family wealth requires deliberate decisions about asset ownership, legal structures and the separation of personal wealth from business risks. Without appropriate safeguards, family assets may be exposed to business liabilities, creditor claims, legal disputes and other threats that compromise their long-term preservation.",
+      "Oxbourn Consulting helps families assess the vulnerabilities in their wealth structures and develop asset protection strategies in collaboration with legal, tax and financial professionals.",
+      "We focus on structuring ownership and separating assets and liabilities in ways that reflect the family’s circumstances, reduce exposure to foreseeable risks and support the preservation of wealth across generations.",
+    ],
+    cover:
+      "Asset protection strategy, ownership risk assessment, liability exposure review, asset segregation, holding company structures, separation of business and personal assets, legal structure review.",
+  },
+  {
+    slug: "operating-business-advisory",
+    title: "Operating Business Advisory",
+    image: "/agency/services/operating-business.jpg",
+    summary:
+      "Helping family-owned businesses establish effective management structures, sound operational processes and clear accountability for sustainable growth.",
+    paragraphs: [
+      "Family-owned businesses require sound management, efficient operations and clear accountability to sustain performance, support growth and contribute to the family’s long-term wealth objectives.",
+      "Oxbourn Consulting helps families improve the performance of their businesses by establishing appropriate organizational structures, improving operational processes and introducing management systems that support effective execution and accountability.",
+      "Our focus is on building professionally managed enterprises that can operate independently of their owners’ day-to-day involvement, adapt to changing business conditions and sustain performance across generations.",
+    ],
+    cover:
+      "Business process improvement, organizational design, operational efficiency, management systems, performance management, corporate governance, strategy implementation and operational reviews.",
   },
   {
     slug: "wealth-reporting-technology",
@@ -148,9 +176,9 @@ export const services = [
     summary:
       "Providing a consolidated 360° view of your family’s entire wealth across asset classes, entities and jurisdictions, supported by technology designed for visibility, reporting and oversight.",
     paragraphs: [
-      "A family cannot effectively oversee or manage the wealth it cannot see as a whole.",
-      "Oxbourn Consulting provides the reporting framework and technology that gives families like yours a consolidated 360° view of their entire wealth across all asset classes, entities and jurisdictions.",
-      "Rather than relying on disconnected statements and information from different advisors, the family can have a central view of its holdings, ownership, values, performance, liabilities and other relevant information for effective oversight and decision-making.",
+      "A family cannot effectively oversee or manage its wealth without a consolidated view of what it owns, how its assets are structured and how its wealth is performing.",
+      "Oxbourn Consulting helps families like yours establish a consolidated 360° view of their wealth across asset classes, entities and jurisdictions, bringing together the information needed to understand and oversee their entire wealth.",
+      "By consolidating information that would otherwise remain scattered across statements, entities and professional advisors, we enable families to gain visibility into their holdings, ownership structures, valuations, performance and liabilities, providing a reliable basis for oversight and informed decision-making.",
     ],
     cover:
       "Wealth consolidation, wealth mapping, asset and entity reporting, ownership visibility, valuation tracking, document management, reporting dashboards and technology-enabled wealth oversight.",
@@ -162,40 +190,12 @@ export const services = [
     summary:
       "Preparing your children and your children's children to understand, manage and responsibly steward family wealth and values from one generation to the next.",
     paragraphs: [
-      "The continuity of family wealth depends not only on what the family owns, but on whether the next generation understands what it means to own, govern and steward it.",
-      "Oxbourn Consulting prepares the next generation to understand the family’s wealth, businesses, governance arrangements and responsibilities, while developing the knowledge and capabilities required for meaningful participation in the family’s future.",
-      "The focus is not simply financial literacy. It is preparation for responsible ownership and stewardship.",
+      "The continuity of family wealth depends not only on what the family owns, but on whether the next generation is prepared to assume the responsibilities of ownership, governance and stewardship.",
+      "Oxbourn Consulting helps families prepare the next generation to understand the family’s wealth, businesses and governance structures, while developing the knowledge and capabilities required to participate meaningfully in the family’s affairs and take on future responsibilities.",
+      "Our focus extends beyond financial literacy to developing informed, responsible family members who understand the obligations of wealth ownership and are prepared to contribute to its preservation and growth across generations.",
     ],
     cover:
       "Wealth education, family governance, ownership responsibilities, financial literacy, business understanding, investment awareness, leadership development, family values and preparation for roles within the family office.",
-  },
-  {
-    slug: "operating-business-advisory",
-    title: "Operating Business Advisory",
-    image: "/agency/services/operating-business.jpg",
-    summary:
-      "Helping family-owned businesses establish effective management structures, sound operational processes and clear accountability for sustainable growth.",
-    paragraphs: [
-      "Family-owned businesses require effective management structures, sound operational processes and clear accountability to remain sustainable and contribute to the family's long-term wealth objectives.",
-      "Oxbourn Consulting helps families like yours to strengthen the management and operations of their businesses by establishing appropriate organizational structures, improving business processes and aligning operational activities with strategic objectives.",
-      "Our approach focuses on building well-structured, professionally managed enterprises that can operate efficiently, reduce dependence on individual owners and support sustainable business growth across generations.",
-    ],
-    cover:
-      "Business process improvement, organizational structuring, operational efficiency, management systems, performance management, corporate governance, business strategy implementation and operational reviews.",
-  },
-  {
-    slug: "asset-protection-advisory",
-    title: "Asset Protection Advisory",
-    image: "/agency/services/asset-protection.jpg",
-    summary:
-      "Helping families protect wealth by reviewing how assets are owned, structured and safeguarded against legal, business and other risks.",
-    paragraphs: [
-      "Protecting family wealth requires careful consideration of how assets are owned, structured and safeguarded against potential risks. Without adequate protection, wealth may be exposed to legal disputes, business liabilities, creditor claims and other threats that could undermine its long-term preservation.",
-      "Oxbourn Consulting helps families like yours to identify potential vulnerabilities in their wealth structures and work with relevant legal, tax and financial professionals to develop effective asset protection strategies.",
-      "Our approach focuses on aligning asset ownership, legal structures and governance frameworks with the family's circumstances and objectives to protect wealth and support its preservation across generations.",
-    ],
-    cover:
-      "Asset protection strategy, ownership risk assessment, liability exposure review, asset segregation, holding structures, protection of business and personal assets, legal structure review and coordination with legal and tax advisors.",
   },
 ] as const;
 
