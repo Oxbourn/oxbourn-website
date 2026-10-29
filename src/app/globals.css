@@ -27,7 +27,7 @@
   --color-ox-muted: var(--ox-muted);
   --color-ox-cream: var(--ox-cream);
   --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Outfit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --breakpoint-sm: 36rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 61.25rem;
@@ -347,7 +347,7 @@ header.masthead .masthead-copy {
 header.masthead .masthead-heading {
   margin: 0 0 0.85rem;
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -693,7 +693,7 @@ header.masthead .masthead-subheading {
 
   .section-heading {
     margin-bottom: 2.5rem;
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 1.15;
   }
 
@@ -725,7 +725,7 @@ header.masthead .masthead-subheading {
 
   header.masthead .masthead-heading {
     margin-bottom: 1rem;
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     line-height: 1.18;
   }
 
@@ -803,7 +803,7 @@ header.masthead .masthead-subheading {
   }
 
   header.masthead .masthead-heading {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 
   header.masthead .masthead-subheading {
@@ -1540,7 +1540,7 @@ html[data-fonts="clean"] {
 }
 
 html[data-fonts="modern"] {
-  --font-display: "Outfit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 

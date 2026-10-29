@@ -17,7 +17,7 @@ export default function ContactPage() {
         subheading="Tell us about your family's wealth, governance and continuity goals — and how we can help."
         cta="Learn more"
         ctaHref="/#what-we-do"
-        image="/hero/banner.jpg"
+        image="/hero/contact.jpg"
       />
 
       <section className="page-section bg-white">
