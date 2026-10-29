@@ -96,13 +96,47 @@ function rewriteWpLinks(html: string) {
   }, html);
 }
 
+function firstContentImage(html: string) {
+  const img = html.match(/<img\b[^>]*>/i)?.[0];
+  if (!img) {
+    return undefined;
+  }
+
+  const url = img.match(/\bsrc=["']([^"']+)["']/i)?.[1];
+  if (!url) {
+    return undefined;
+  }
+
+  const alt = img.match(/\balt=["']([^"']*)["']/i)?.[1] ?? "";
+  return { url, alt };
+}
+
+function stripLeadingImage(html: string) {
+  return html
+    .replace(
+      /^\s*(?:<!--[\s\S]*?-->\s*)*(?:<figure\b[\s\S]*?<\/figure>|<div\b[^>]*wp-block-image[^>]*>[\s\S]*?<\/div>)\s*/i,
+      "",
+    )
+    .trim();
+}
+
 function mapPost(post: WpPostResponse): WordPressPost {
   const media = post._embedded?.["wp:featuredmedia"]?.[0];
   const category = post._embedded?.["wp:term"]
     ?.flat()
     .find((term) => term.taxonomy === "category")?.name;
   const title = stripHtml(post.title.rendered);
-  const content = rewriteWpLinks(formatWpContent(post.content.rendered));
+  const fromContent = firstContentImage(post.content.rendered);
+  const featuredImage = media?.source_url
+    ? { url: media.source_url, alt: media.alt_text || title }
+    : fromContent
+      ? { url: fromContent.url, alt: fromContent.alt || title }
+      : undefined;
+  const rawContent =
+    !media?.source_url && fromContent
+      ? stripLeadingImage(post.content.rendered)
+      : post.content.rendered;
+  const content = rewriteWpLinks(formatWpContent(rawContent));
   const words = `${title} ${stripHtml(content)}`.split(/\s+/).filter(Boolean).length;
 
   return {
@@ -115,9 +149,7 @@ function mapPost(post: WpPostResponse): WordPressPost {
     author: formatAuthor(post._embedded?.author?.[0]?.name),
     category,
     readingMinutes: Math.max(1, Math.round(words / 200)),
-    featuredImage: media?.source_url
-      ? { url: media.source_url, alt: media.alt_text || title }
-      : undefined,
+    featuredImage,
   };
 }
 

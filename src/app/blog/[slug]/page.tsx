@@ -47,35 +47,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="bg-white pt-28 pb-24">
       <div className="site-container">
-        <header className="max-w-4xl">
-          <nav aria-label="Breadcrumb">
-            <ol className="flex flex-wrap items-center gap-2 text-sm text-ox-muted">
-              <li>
-                <Link href="/blog" className="text-ox-teal hover:text-ox-teal-dark">
-                  Insights
-                </Link>
-              </li>
-              <li aria-hidden="true">/</li>
-              <li className="max-w-[28rem] truncate">{post.title}</li>
-            </ol>
-          </nav>
-          <p className="mt-6 font-sans text-sm text-ox-muted">
-            {formatPostDate(post.date)}
-            <span className="mx-2 text-ox-teal">•</span>
+        <header>
+          <p className="section-kicker text-[0.7rem] text-ox-teal">
+            <Link href="/blog" className="hover:text-ox-teal-dark">
+              Insights
+            </Link>
+            <span className="mx-2 text-ox-ice">/</span>
             {post.category ?? "Insights"}
-            <span className="mx-2 text-ox-teal">•</span>
-            {post.readingMinutes} min read
           </p>
-          <h1 className="article-title mt-5">{post.title}</h1>
-          <p className="mt-6 text-sm text-ox-muted">
-            By <span className="font-semibold text-ox-navy">{post.author || site.name}</span>
-          </p>
+          <h1 className="article-title mt-4 tracking-tight">{post.title}</h1>
+          <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ox-muted">
+            <span>{formatPostDate(post.date)}</span>
+            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-ox-teal/70" />
+            <span>{post.readingMinutes} min read</span>
+            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-ox-teal/70" />
+            <span>
+              By <span className="font-medium text-ox-navy">{post.author || site.name}</span>
+            </span>
+          </div>
         </header>
 
-        <div className="mt-14 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-16">
+        <div className="mt-10 grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_18.5rem] lg:gap-16">
           <div>
             {post.featuredImage ? (
-              <div className="relative aspect-[16/9] overflow-hidden bg-ox-navy">
+              <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-2xl bg-ox-navy">
                 <Image
                   src={post.featuredImage.url}
                   alt={post.featuredImage.alt}
@@ -88,15 +83,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             ) : null}
 
             <div
-              className="wp-content mt-10"
+              className="wp-content"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
 
           <aside className="lg:sticky lg:top-28">
-            <div className="bg-ox-navy px-6 py-8 text-white">
-              <p className="page-subtitle text-white">Have questions?</p>
-              <p className="mt-3 text-sm leading-6 text-white/75">
+            <div className="rounded-2xl bg-ox-navy px-7 py-8 text-white">
+              <p className="font-display text-lg font-bold tracking-tight text-white">
+                Have questions?
+              </p>
+              <p className="mt-3 text-sm leading-6 text-white/70">
                 Discuss your family’s wealth, governance and continuity with Oxbourn Consulting.
               </p>
               <Link href="/contact" className="btn-agency mt-6">
@@ -104,13 +101,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
             </div>
             {related[0] ? (
-              <div className="mt-8 hidden lg:block">
-                <p className="section-kicker text-[0.7rem] text-ox-teal">
-                  More Insights
-                </p>
-                <div className="mt-4">
-                  <PostCard post={related[0]} />
-                </div>
+              <div className="mt-8 hidden overflow-hidden rounded-2xl border border-ox-ice lg:block [&>article]:shadow-none">
+                <PostCard post={related[0]} />
               </div>
             ) : null}
           </aside>
@@ -120,9 +112,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {related.length > 0 ? (
         <section className="mt-20 border-t border-ox-ice bg-ox-mist py-20">
           <div className="site-container">
-            <p className="text-center text-sm text-ox-muted">You may also like</p>
-            <h2 className="page-title mt-3 text-center">Related posts</h2>
-            <span className="mx-auto mt-5 block h-0.5 w-20 bg-ox-teal" />
+            <p className="section-kicker text-center text-[0.7rem] text-ox-teal">
+              More Insights
+            </p>
+            <h2 className="page-title mt-3 text-center">Keep reading</h2>
+            <span className="mx-auto mt-5 block h-0.5 w-16 bg-ox-teal" />
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               {related.map((item) => (
                 <PostCard key={item.id} post={item} />

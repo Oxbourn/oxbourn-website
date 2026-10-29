@@ -17,6 +17,7 @@ export function PostCard({ post }: PostCardProps) {
             fill
             className="object-cover"
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            quality={85}
           />
         ) : (
           <div className="h-full bg-gradient-to-br from-ox-teal to-ox-navy" />

@@ -27,7 +27,7 @@
   --color-ox-muted: var(--ox-muted);
   --color-ox-cream: var(--ox-cream);
   --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Montserrat", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Outfit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --breakpoint-sm: 36rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 61.25rem;
@@ -99,10 +99,18 @@ section[id] {
 .page-title,
 .article-title {
   font-family: var(--font-display);
-  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 1.2;
   color: var(--ox-navy);
+}
+
+.page-title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  line-height: 1.25;
 }
 
 .page-title {
@@ -685,10 +693,14 @@ header.masthead .masthead-subheading {
     padding: 9rem 0;
   }
 
-  .page-title,
-  .article-title {
+  .page-title {
     font-size: 2.5rem;
     line-height: 1.12;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
   .section-heading {
@@ -1264,21 +1276,19 @@ p {
 }
 
 .wp-content {
-  color: var(--ox-muted);
-  font-size: 0.95rem;
-  font-weight: 300;
-  line-height: 1.7;
+  color: #2d3538;
+  font-family: var(--font-sans);
+  font-size: 1.03125rem;
+  font-weight: 400;
+  letter-spacing: -0.011em;
+  line-height: 1.75;
 }
 
 @media (min-width: 768px) {
   .wp-content {
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 1.0625rem;
+    line-height: 1.78;
   }
-}
-
-.wp-content > * + * {
-  margin-top: 1.35rem;
 }
 
 .wp-content h1,
@@ -1291,44 +1301,134 @@ p {
   color: var(--ox-navy);
   font-family: var(--font-display);
   font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1.25;
 }
 
 .wp-content h1 {
-  font-size: 1.55rem;
-  margin-top: 2.25rem;
+  font-size: 1.45rem;
+  margin: 2em 0 0.65em;
 }
 
 .wp-content h2,
 .wp-content h2.wp-block-heading {
-  font-size: 1.3rem;
-  margin-bottom: 0.7rem;
-  margin-top: 2.25rem;
+  font-size: 1.22rem;
+  margin: 1.85em 0 0.55em;
 }
 
 .wp-content h3 {
-  font-size: 1.15rem;
-  margin-top: 1.8rem;
+  font-size: 1.08rem;
+  margin: 1.65em 0 0.5em;
 }
 
 .wp-content h4,
 .wp-content h5,
 .wp-content h6 {
-  font-size: 1.12rem;
-  margin-top: 1.8rem;
+  font-size: 1.02rem;
+  margin: 1.5em 0 0.45em;
 }
 
 .wp-content p,
 .wp-content .wp-block-paragraph {
-  margin: 0;
-  font-weight: 300;
-  color: var(--ox-muted);
+  margin: 0 0 1.2em;
+  color: #2d3538;
+}
+
+.wp-content p:last-child,
+.wp-content .wp-block-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.wp-content p:has(> strong:only-child),
+.wp-content p:has(> b:only-child) {
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+}
+
+.wp-content p:has(> strong:only-child) strong,
+.wp-content p:has(> b:only-child) b {
+  font-family: var(--font-display);
+  font-size: 1.12em;
+  letter-spacing: -0.03em;
+}
+
+.wp-content p > em:first-child,
+.wp-content p > i:first-child {
+  color: var(--ox-navy);
+  font-weight: 500;
+}
+
+.wp-content .has-background {
+  background: color-mix(in srgb, var(--ox-teal) 7%, #f7fbfc) !important;
+  border: 1px solid color-mix(in srgb, var(--ox-teal) 14%, #e7eef0);
+  border-radius: 0.9rem;
+  box-shadow: inset 3px 0 0 var(--ox-teal);
+  color: #2d3538;
+  margin: 1.6em 0;
+  padding: 1.2rem 1.3rem 1.25rem 1.45rem;
+}
+
+.wp-content p.has-background {
+  margin-bottom: 1.5em;
+}
+
+.wp-content .has-background > strong:first-child,
+.wp-content .has-background > b:first-child {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.08em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.55em;
+}
+
+.wp-content .has-background > strong:first-child + br,
+.wp-content .has-background > b:first-child + br {
+  display: none;
+}
+
+.wp-content .has-background br {
+  content: "";
+  display: block;
+  margin-top: 0.75em;
+}
+
+.wp-content .wp-block-group {
+  margin: 1.35rem 0;
+}
+
+.wp-content .wp-block-columns {
+  display: grid;
+  gap: 1.35rem;
+  margin: 1.35rem 0;
+}
+
+@media (min-width: 768px) {
+  .wp-content .wp-block-columns {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+
+.wp-content .has-drop-cap:first-letter {
+  float: left;
+  padding-right: 0.12em;
+  font-family: var(--font-display);
+  font-size: 3.1em;
+  font-weight: 700;
+  line-height: 0.85;
 }
 
 .wp-content a {
   color: var(--ox-teal-dark);
   text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--ox-teal) 45%, transparent);
   text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.wp-content a:hover {
+  color: var(--ox-teal);
+  text-decoration-color: var(--ox-teal);
 }
 
 .wp-content strong,
@@ -1345,90 +1445,61 @@ p {
 .wp-content ul,
 .wp-content ol,
 .wp-content .wp-block-list {
-  padding-left: 1.35rem;
+  margin: 0 0 1.25em;
+  padding-left: 1.2rem;
 }
 
 .wp-content ul {
-  list-style: disc;
+  list-style: none;
+  padding-left: 0.15rem;
+}
+
+.wp-content ul > li {
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.wp-content ul > li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0.15rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: var(--ox-teal);
 }
 
 .wp-content ol {
   list-style: decimal;
 }
 
+.wp-content ol > li::marker {
+  color: var(--ox-teal);
+  font-weight: 600;
+}
+
 .wp-content li + li {
-  margin-top: 0.45rem;
+  margin-top: 0.5rem;
 }
 
-.wp-content .wp-defs {
-  display: grid;
-  gap: 1rem;
-  margin: 1.75rem 0 0;
+.wp-content .has-text-align-left {
+  text-align: left;
 }
 
-.wp-content .wp-defs-item {
-  border-left: 3px solid var(--ox-teal);
-  padding: 0.15rem 0 0.15rem 1rem;
-}
-
-.wp-content .wp-defs dt,
-.wp-content .wp-term strong {
-  color: var(--ox-navy);
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.wp-content .wp-defs dd,
-.wp-content .wp-term {
-  margin: 0;
-}
-
-.wp-content blockquote,
-.wp-content .wp-block-quote,
-.wp-content .wp-block-pullquote {
-  background: var(--ox-mist);
-  border-left: 4px solid var(--ox-teal);
-  color: var(--ox-navy);
-  font-style: italic;
-  margin: 2rem 0 0;
-  padding: 1.1rem 1.25rem;
-}
-
-.wp-content blockquote cite,
-.wp-content .wp-block-quote cite {
-  color: var(--ox-navy);
-  display: block;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-style: normal;
-  margin-top: 0.75rem;
-}
-
-.wp-content figure,
-.wp-content .wp-block-image,
-.wp-content .wp-block-video,
-.wp-content .wp-block-embed {
-  margin: 2rem 0 0;
-}
-
-.wp-content img,
-.wp-content video,
-.wp-content iframe {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-.wp-content figcaption,
-.wp-content .wp-element-caption,
-.wp-content .wp-caption-text {
-  color: var(--ox-muted);
-  font-size: 0.85rem;
-  margin-top: 0.6rem;
+.wp-content .has-text-align-center,
+.wp-content .aligncenter {
   text-align: center;
+}
+
+.wp-content .has-text-align-right {
+  text-align: right;
+}
+
+.wp-content figure.aligncenter,
+.wp-content .wp-block-image.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wp-content .alignleft {
@@ -1441,39 +1512,82 @@ p {
   margin: 0.35rem 0 1rem 1.25rem;
 }
 
-.wp-content .aligncenter,
-.wp-content .has-text-align-center {
-  text-align: center;
-}
-
-.wp-content .has-text-align-left {
-  text-align: left;
-}
-
-.wp-content .has-text-align-right {
-  text-align: right;
-}
-
 .wp-content table,
 .wp-content .wp-block-table table {
-  border-collapse: collapse;
-  margin-top: 1.75rem;
   width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  border-radius: 0.75rem;
 }
 
 .wp-content th,
 .wp-content td {
-  border: 1px solid var(--ox-ice);
-  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--ox-ice);
+  padding: 0.75rem 0.9rem;
   text-align: left;
   vertical-align: top;
 }
 
 .wp-content th {
-  background: var(--ox-mist);
+  background: #f6fafb;
   color: var(--ox-navy);
   font-family: var(--font-display);
   font-weight: 700;
+}
+
+.wp-content hr,
+.wp-content .wp-block-separator {
+  height: 1px;
+  margin: 2.25rem 0;
+  border: 0;
+  background: var(--ox-ice);
+}
+
+.wp-content blockquote,
+.wp-content .wp-block-quote,
+.wp-content .wp-block-pullquote {
+  margin: 1.6rem 0;
+  padding: 0.15rem 0 0.15rem 1.2rem;
+  border-left: 3px solid var(--ox-teal);
+  background: transparent;
+  color: var(--ox-navy);
+  font-style: italic;
+}
+
+.wp-content blockquote cite,
+.wp-content .wp-block-quote cite {
+  color: var(--ox-muted);
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: normal;
+  margin-top: 0.7rem;
+}
+
+.wp-content figure,
+.wp-content .wp-block-image,
+.wp-content .wp-block-video,
+.wp-content .wp-block-embed {
+  margin: 1.75rem 0;
+}
+
+.wp-content img,
+.wp-content video,
+.wp-content iframe {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.9rem;
+}
+
+.wp-content figcaption,
+.wp-content .wp-element-caption,
+.wp-content .wp-caption-text {
+  color: var(--ox-muted);
+  font-size: 0.82rem;
+  margin-top: 0.65rem;
+  text-align: center;
 }
 
 .wp-content pre,
@@ -1481,30 +1595,24 @@ p {
 .wp-content .wp-block-preformatted {
   background: var(--ox-navy);
   color: #f4f7f7;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   overflow-x: auto;
-  padding: 1rem 1.15rem;
+  border-radius: 0.9rem;
+  padding: 1.05rem 1.2rem;
 }
 
 .wp-content code,
 .wp-content kbd {
-  background: var(--ox-ice);
-  font-size: 0.92em;
+  background: #f0f5f6;
+  border-radius: 0.3rem;
+  font-size: 0.9em;
   padding: 0.1em 0.35em;
 }
 
 .wp-content pre code {
   background: transparent;
   padding: 0;
-}
-
-.wp-content hr,
-.wp-content .wp-block-separator {
-  background: var(--ox-ice);
-  border: 0;
-  height: 1px;
-  margin: 2.25rem 0;
 }
 
 .wp-content .wp-block-button__link,
@@ -1519,6 +1627,7 @@ p {
   padding: 0.85rem 1.4rem;
   text-decoration: none;
   text-transform: capitalize;
+  border-radius: 999px;
 }
 
 .wp-content .gallery,
@@ -1540,7 +1649,7 @@ html[data-fonts="clean"] {
 }
 
 html[data-fonts="modern"] {
-  --font-display: "Montserrat", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Outfit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
