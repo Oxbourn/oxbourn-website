@@ -119,7 +119,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="section-kicker text-center text-[0.7rem] text-ox-teal">
               More Insights
             </p>
-            <h2 className="page-title mt-3 text-center">Keep reading</h2>
             <span className="mx-auto mt-5 block h-0.5 w-16 bg-ox-teal" />
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               {related.map((item) => (
