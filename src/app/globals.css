@@ -59,6 +59,16 @@ html {
   }
 }
 
+.article-page .site-container {
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .article-page .site-container {
+    padding-inline: 2.25rem;
+  }
+}
+
 section[id] {
   scroll-margin-top: 5.5rem;
 }

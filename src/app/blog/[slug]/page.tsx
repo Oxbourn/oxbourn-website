@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const related = posts.filter((item) => item.id !== post.id).slice(0, 2);
 
   return (
-    <article className="bg-white pt-28 pb-24">
+    <article className="article-page bg-white pt-28 pb-24">
       <div className="site-container">
         <header>
           <p className="section-kicker text-[0.7rem] text-ox-teal">
