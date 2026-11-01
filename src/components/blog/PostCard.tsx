@@ -37,7 +37,7 @@ export function PostCard({ post }: PostCardProps) {
             {post.title}
           </Link>
         </h3>
-        <p className="mt-3 line-clamp-3 flex-1 text-sm leading-6 text-ox-muted">
+        <p className="mt-3 line-clamp-3 flex-1 text-sm leading-[1.45] text-ox-muted">
           {post.excerpt}
         </p>
         <Link

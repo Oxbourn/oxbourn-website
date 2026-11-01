@@ -72,7 +72,7 @@ section[id] {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.08;
   text-transform: capitalize;
   color: var(--ox-navy);
 }
@@ -88,7 +88,7 @@ section[id] {
   font-size: 0.85rem;
   font-weight: 300;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.4;
   color: var(--ox-muted);
 }
 
@@ -105,12 +105,12 @@ section[id] {
 
 .page-title {
   font-size: 1.75rem;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .article-title {
   font-size: 1.5rem;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .page-title {
@@ -121,7 +121,7 @@ section[id] {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   text-transform: capitalize;
   color: var(--ox-navy);
 }
@@ -129,7 +129,7 @@ section[id] {
 .page-prose {
   font-size: 0.95rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.45;
   color: var(--ox-muted);
 }
 
@@ -146,7 +146,7 @@ section[id] {
 .about-copy {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0.9rem;
   max-width: 48rem;
   margin-inline: auto;
 }
@@ -155,7 +155,7 @@ section[id] {
 .about-copy p {
   font-size: 0.95rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.45;
   color: var(--ox-muted);
 }
 
@@ -175,8 +175,8 @@ section[id] {
 
   .about-copy,
   .about-copy p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .service-page-media {
@@ -337,14 +337,6 @@ header.masthead .masthead-photo {
   object-position: 30% 35%;
 }
 
-header.masthead .masthead-photo-center {
-  object-position: center;
-}
-
-header.masthead .masthead-copy:not(:has(.btn-agency)) .masthead-subheading {
-  margin-bottom: 0;
-}
-
 header.masthead .masthead-overlay {
   position: absolute;
   inset: 0;
@@ -361,11 +353,11 @@ header.masthead .masthead-copy {
 }
 
 header.masthead .masthead-heading {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.55rem;
   font-family: var(--font-display);
   font-size: 1.85rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.05;
 }
 
 header.masthead .masthead-subheading {
@@ -375,7 +367,7 @@ header.masthead .masthead-subheading {
   font-size: 1.05rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 1.55;
+  line-height: 1.25;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -447,7 +439,7 @@ header.masthead .masthead-subheading {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   color: var(--ox-navy);
 }
 
@@ -475,11 +467,11 @@ header.masthead .masthead-subheading {
   -webkit-line-clamp: 3;
   line-clamp: 3;
   overflow: hidden;
-  min-height: calc(1.55em * 3);
+  min-height: calc(1.45em * 3);
   margin: 0.9rem 0 1rem;
   font-size: 0.95rem;
   font-weight: 300;
-  line-height: 1.55;
+  line-height: 1.45;
   color: var(--ox-muted);
 }
 
@@ -574,7 +566,7 @@ header.masthead .masthead-subheading {
   padding-top: 0;
   font-size: 0.9rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.68);
 }
 
@@ -638,7 +630,7 @@ header.masthead .masthead-subheading {
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   color: var(--ox-navy);
 }
 
@@ -646,7 +638,7 @@ header.masthead .masthead-subheading {
   margin: 0.5rem 0 0;
   font-size: 0.85rem;
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--ox-muted);
 }
 
@@ -708,13 +700,13 @@ header.masthead .masthead-subheading {
 
   .article-title {
     font-size: 2rem;
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
   .section-heading {
     margin-bottom: 2.5rem;
     font-size: 2rem;
-    line-height: 1.15;
+    line-height: 1.08;
   }
 
   .section-subheading {
@@ -728,8 +720,8 @@ header.masthead .masthead-subheading {
   }
 
   .page-prose {
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   header.masthead {
@@ -744,15 +736,15 @@ header.masthead .masthead-subheading {
   }
 
   header.masthead .masthead-heading {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     font-size: 2.5rem;
-    line-height: 1.18;
+    line-height: 1.05;
   }
 
   header.masthead .masthead-subheading {
     margin-bottom: 1.85rem;
-    font-size: 1.25rem;
-    line-height: 1.55;
+    font-size: 1.15rem;
+    line-height: 1.25;
   }
 
   .btn-agency {
@@ -780,11 +772,11 @@ header.masthead .masthead-subheading {
   .service-copy,
   .portfolio-caption-subheading {
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 1.45;
   }
 
   .service-copy {
-    min-height: calc(1.75em * 3);
+    min-height: calc(1.45em * 3);
   }
 
   .help-accordion {
@@ -823,11 +815,13 @@ header.masthead .masthead-subheading {
   }
 
   header.masthead .masthead-heading {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
+    line-height: 1.05;
   }
 
   header.masthead .masthead-subheading {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
+    line-height: 1.25;
   }
 
   .services-grid {
@@ -1164,7 +1158,7 @@ a.contact-info-item:hover {
 .timeline-body p {
   margin: 0;
   font-size: 0.9rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 @media (min-width: 768px) {
@@ -1178,7 +1172,7 @@ a.contact-info-item:hover {
 
   .timeline-body p {
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
   .timeline::before {
@@ -1289,7 +1283,11 @@ p {
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.5;
+}
+
+.wp-content > :first-child {
+  margin-top: 0;
 }
 
 .wp-content h1,
@@ -1302,36 +1300,36 @@ p {
   color: var(--ox-navy);
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .wp-content h1 {
-  font-size: 1.45rem;
-  margin: 2em 0 0.65em;
+  font-size: 1.2rem;
+  margin: 1.7em 0 0.7em;
 }
 
 .wp-content h2,
 .wp-content h2.wp-block-heading {
-  font-size: 1.22rem;
-  margin: 1.85em 0 0.55em;
+  font-size: 1.12rem;
+  margin: 1.7em 0 0.7em;
 }
 
 .wp-content h3 {
-  font-size: 1.08rem;
-  margin: 1.65em 0 0.5em;
+  font-size: 1.02rem;
+  margin: 1.55em 0 0.65em;
 }
 
 .wp-content h4,
 .wp-content h5,
 .wp-content h6 {
-  font-size: 1.02rem;
-  margin: 1.5em 0 0.45em;
+  font-size: 0.95rem;
+  margin: 1.45em 0 0.65em;
 }
 
 .wp-content p,
 .wp-content .wp-block-paragraph {
-  margin: 0 0 1.15em;
+  margin: 0 0 0.85em;
   color: var(--ox-muted);
 }
 
@@ -1340,17 +1338,23 @@ p {
   margin-bottom: 0;
 }
 
+.wp-content .wp-subhead,
 .wp-content p:has(> strong:only-child),
 .wp-content p:has(> b:only-child) {
-  margin-top: 2em;
+  margin-top: 1.7em;
   margin-bottom: 0.7em;
+  line-height: 1.2;
 }
 
+.wp-content .wp-subhead strong,
+.wp-content .wp-subhead b,
 .wp-content p:has(> strong:only-child) strong,
 .wp-content p:has(> b:only-child) b {
+  display: inline;
   font-family: var(--font-display);
-  font-size: 1.12em;
-  letter-spacing: -0.03em;
+  font-size: 1.06em;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .wp-content p > em:first-child,
@@ -1365,12 +1369,12 @@ p {
   border-radius: 0.9rem;
   box-shadow: inset 3px 0 0 var(--ox-teal);
   color: #2d3538;
-  margin: 1.6em 0;
-  padding: 1.2rem 1.3rem 1.25rem 1.45rem;
+  margin: 1.15em 0;
+  padding: 1rem 1.15rem 1.05rem 1.25rem;
 }
 
 .wp-content p.has-background {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .wp-content .has-background > strong:first-child,
@@ -1380,7 +1384,7 @@ p {
   font-size: 1.08em;
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin-bottom: 0.55em;
+  margin-bottom: 0.35em;
 }
 
 .wp-content .has-background > strong:first-child + br,
@@ -1391,7 +1395,7 @@ p {
 .wp-content .has-background br {
   content: "";
   display: block;
-  margin-top: 0.75em;
+  margin-top: 0.45em;
 }
 
 .wp-content .wp-block-group {
@@ -1637,85 +1641,6 @@ p {
   gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   margin-top: 1.75rem;
-}
-
-.article-page {
-  background-color: #d8cfc0;
-  background-image:
-    linear-gradient(
-      165deg,
-      rgba(255, 255, 255, 0.38) 0%,
-      rgba(255, 255, 255, 0.08) 36%,
-      rgba(70, 52, 28, 0.08) 100%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(70, 52, 28, 0.04) 0 1px,
-      transparent 1px 28px
-    );
-}
-
-.article-paper {
-  position: relative;
-  isolation: isolate;
-  background-color: #f6efe3;
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.62) 0%,
-      rgba(255, 255, 255, 0.14) 16%,
-      rgba(255, 255, 255, 0) 42%,
-      rgba(90, 70, 40, 0.05) 100%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 31px,
-      rgba(70, 52, 28, 0.045) 32px
-    );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.78),
-    0 18px 40px rgba(40, 28, 12, 0.08);
-}
-
-.article-paper::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.2;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
-}
-
-.article-paper > * {
-  position: relative;
-  z-index: 1;
-}
-
-.article-related {
-  border-top: 1px solid rgba(70, 52, 28, 0.12);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
-}
-
-.article-paper-inner {
-  width: 100%;
-  margin-inline: auto;
-  padding: 2rem 1.75rem 3.5rem;
-}
-
-@media (min-width: 768px) {
-  .article-paper-inner {
-    max-width: 1140px;
-    padding: 3rem 2rem 5rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .article-paper-inner {
-    max-width: 1320px;
-  }
 }
 
 html[data-fonts="agency"] {
