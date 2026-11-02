@@ -678,12 +678,6 @@ header.masthead .masthead-subheading {
   gap: 2rem;
 }
 
-@media (min-width: 1400px) {
-  .insight-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
 @media (min-width: 768px) {
   .services-grid,
   .portfolio-grid,

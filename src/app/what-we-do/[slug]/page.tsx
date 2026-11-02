@@ -62,10 +62,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
-              <div className="mt-10 border-t border-ox-ice pt-8">
-                <h2 className="page-subtitle">What we cover</h2>
-                <p className="page-prose mt-4">{service.cover}</p>
-              </div>
             </div>
             <div className="service-page-media">
               <Image

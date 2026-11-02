@@ -9,7 +9,7 @@ type LatestFromBlogProps = {
 };
 
 export async function LatestFromBlog({ surface = "white" }: LatestFromBlogProps) {
-  const posts = (await getPosts(4)).slice(0, 4);
+  const posts = await getPosts(9);
 
   return (
     <section
